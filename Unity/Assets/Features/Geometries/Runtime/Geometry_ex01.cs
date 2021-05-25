@@ -1,18 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class Geometry_ex01 : MonoBehaviour
+namespace Geometries.Runtime
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Geometry_ex01
     {
-        
-    }
+        #region Public
+        public float m_width;
+        public float m_lenght;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        #endregion
+
+
+        #region Constructors
+        public Geometry_ex01(float width, float length)
+        {
+            m_lenght = length;
+            m_width = width;
+        }
+        #endregion
+
+
+        #region Main
+
+        ///Sur base de la longueur et de la largeur du rectangle, dis si celui-ci est un carré
+        public bool IsSquare()
+        {
+            throw new NotImplementedException("Au boulot fainéant.");
+        }
+        #endregion
     }
 }
