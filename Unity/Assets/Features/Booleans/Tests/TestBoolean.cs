@@ -50,8 +50,8 @@ public class TestBoolean
         list.Add("pull bleu");
         list.Add("pull rouge");
 
-        var MyBooleanTest = new Boolean_ex02();
-        var result = MyBooleanTest.ShoppingList(list);
+        var myBooleanTest = new Boolean_ex02();
+        var result = myBooleanTest.ShoppingList(list);
 
         Assert.IsFalse(result);
     }
@@ -62,9 +62,26 @@ public class TestBoolean
         list.Add("pull rouge");
         list.Add("pull gris");
 
-        var MyBooleanTest = new Boolean_ex02();
-        var result = MyBooleanTest.ShoppingList(list);
+        var myBooleanTest = new Boolean_ex02();
+        var result = myBooleanTest.ShoppingList(list);
 
         Assert.IsTrue(result);
+    }
+
+    [Test]
+    public void CuttingBoar()
+    {
+        var myBooleanTest = new Boolean_ex03();
+
+        var result = myBooleanTest.CuttingBoar(5, 25);
+        Assert.IsTrue(result);
+    }
+    [Test]
+    public void CuttingBoar2()
+    {
+        var myBooleanTest = new Boolean_ex03();
+
+        var result = myBooleanTest.CuttingBoar(25, 4);
+        Assert.IsFalse(result);
     }
 }
