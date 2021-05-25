@@ -81,6 +81,22 @@ public class LIST_SHOULD
     [Test]
     public void _ExList05()
     {
+        //Given
+        List<Module> modules = new List<Module>();
+        modules.Add(new Module("Unity", 51));
+        modules.Add(new Module("Suivi Florence", 7));
+        modules.Add(new Module("Certification Unity", 5));
+        modules.Add(new Module("Gamejam", 10));
+
+        //When
+        var result = listClass.CheckModules(modules);
+
+        var answer = modules.FindAll(x => x.Length <= 14 && x.Name.Contains("Unity"));
+
+        //Then
+        Assert.IsTrue(answer.SequenceEqual(result));
+
+
 
 
     }

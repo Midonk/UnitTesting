@@ -37,6 +37,12 @@ namespace ListSystem
             return new Person() ;
         }
 
+
+
+
+
+
+
         /// J'ai entendu une drole d'histoire à propos de cette personne. Mais attends, qui était-ce déjà ? Zut j'ai la mémoire courte. 
         /// Mais je sais que l'on peut trouver le nom de son pire enemi. 
         /// 
@@ -44,8 +50,25 @@ namespace ListSystem
         public string ThatEnemy(List<Person> classroomList)
         {
             
-            return classroomList.Find(x => x.FirstName == "Cherif").Enemy;
+            return "";
         }
+
+
+
+
+
+
+
+        /// Bien, voyons un peu plus grand maintenant. Et changeons completement de sujet. Quels sont les modules de la formation qui durent le moins longtemps.
+        /// Disons, moins de 14 jours et qui est à propos de Unity.
+
+        public List<Module> CheckModules(List<Module> modules)
+        {
+            return null;
+        }
+
+
+
 
 
         public List_ex01()
@@ -68,4 +91,17 @@ namespace ListSystem
         public string LastName;
         public string Enemy;
     }
+
+    public struct Module
+    {
+        public Module(string name, int length)
+        {
+            Name = name;
+            Length = length;
+        }
+
+        public string Name;
+        public int Length;
+    }
+
 }
