@@ -41,4 +41,30 @@ public class TestBoolean
 
         Assert.IsFalse(result);
     }
+
+    [Test]
+
+    public void ShoppingList()
+    {
+        List<string> list = new List<string>();
+        list.Add("pull bleu");
+        list.Add("pull rouge");
+
+        var MyBooleanTest = new Boolean_ex02();
+        var result = MyBooleanTest.ShoppingList(list);
+
+        Assert.IsFalse(result);
+    }
+    [Test]
+    public void ShoppingList2()
+    {
+        List<string> list = new List<string>();
+        list.Add("pull rouge");
+        list.Add("pull gris");
+
+        var MyBooleanTest = new Boolean_ex02();
+        var result = MyBooleanTest.ShoppingList(list);
+
+        Assert.IsTrue(result);
+    }
 }
