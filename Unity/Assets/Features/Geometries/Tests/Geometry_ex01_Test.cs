@@ -10,7 +10,7 @@ public class Geometry_ex01_Test
 {
     #region Tests
     [SetUp]
-    public void SetupTests()
+    public void SetUpTests()
     {
         _shapeLine = new Geometry_ex01(1.0f, 0.0f);
         _shapeRectangleHigh = new Geometry_ex01(1.0f, 2.0f);
@@ -48,6 +48,15 @@ public class Geometry_ex01_Test
         var result = _shapeSquare.IsSquare();
 
         Assert.IsTrue(result, "D'après vous, un rectangle de 1m x 1m n'est pas un carré?");
+    }
+
+    [TearDown]
+    public void TearDownTests()
+    {
+        _shapeLine = null;
+        _shapeRectangleHigh = null;
+        _shapeRectangleWide = null;
+        _shapeSquare = null;
     }
 
     #endregion
