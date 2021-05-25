@@ -19,13 +19,24 @@ public class LIST_SHOULD
         var result = listClass.TellMeThat();
 
         //Then
-        Assert.IsTrue(Enumerable.SequenceEqual(data, result));
+        Assert.IsTrue(data.SequenceEqual(result));
     }
 
     [Test]
     public void _ExList02()
     {
+        //Given
+        var data = new List<int>() { 5,8,1,3,4,26,15};
+        var listToSort = new List<int>() { 5, 8, 1, 3, 4, 26, 15 };
 
+        //When
+        var result = listClass.HelpMeToSort(listToSort);
+
+        data.Sort();
+
+
+        //Then
+        Assert.IsTrue(data.SequenceEqual(result));
 
     }
 
