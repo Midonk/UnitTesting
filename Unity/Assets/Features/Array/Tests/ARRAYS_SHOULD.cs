@@ -12,7 +12,7 @@ public class ARRAYS_SHOULD
     {
         // Given
         var interestPoints = new int[] { -5, 2, 10, 8, 15, -12 };
-        var ArrayEx01 = new Array_ex01(interestPoints);
+        var ArrayEx01 = new Array_ex01();
 
         // When
         var result = ArrayEx01.GetHighestStrategicalValuePoint(interestPoints);
@@ -26,7 +26,7 @@ public class ARRAYS_SHOULD
     {
         // Given
         var interestPoints = new int[] { -5, -50, -10, -20, -12, -25 };
-        var ArrayEx01 = new Array_ex01(interestPoints);
+        var ArrayEx01 = new Array_ex01();
 
         // When
         var result = ArrayEx01.GetHighestStrategicalValuePoint(interestPoints);
@@ -66,7 +66,7 @@ public class ARRAYS_SHOULD
     }
 
     [Test]
-    public void STOCK_4_METALS_IN_ARRAY()
+    public void STOCK_METALS_IN_ARRAY()
     {
         // Given        
         var production = new string[] { "metal", "junk", "metal", "rock", "rock", "metal", "metal", "metal" };
@@ -77,6 +77,36 @@ public class ARRAYS_SHOULD
         carrierInventory = ArrayEx03.RessourcesForCarrier(production, "metal");
 
         // Then
-        Assert);
+        Assert.IsTrue(carrierInventory[3] == "metal");
+    }
+
+    [Test]
+    public void STOCK_ROCKS_IN_ARRAY()
+    {
+        // Given        
+        var production = new string[] { "metal", "junk", "metal", "rock", "rock", "metal", "metal", "rock" };
+        string[] carrierInventory;
+        var ArrayEx03 = new Array_ex03(new string[3]);
+
+        // When
+        carrierInventory = ArrayEx03.RessourcesForCarrier(production, "rock");
+
+        // Then
+        Assert.IsTrue(carrierInventory[1] == "rock");
+    }
+
+    [Test]
+    public void HAVE_NULL_AT_LAST_INDEX()
+    {
+        // Given        
+        var production = new string[] { "metal", "junk", "metal", "rock", "rock", "metal", "metal", "rock" };
+        string[] carrierInventory;
+        var ArrayEx03 = new Array_ex03(new string[4]);
+
+        // When
+        carrierInventory = ArrayEx03.RessourcesForCarrier(production, "junk");
+
+        // Then
+        Assert.IsNull(carrierInventory[3]);
     }
 }
