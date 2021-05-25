@@ -4,6 +4,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 using TestVector3Ex01 = Vector3Tests.Vector3_ex01;
+using TestVector3Ex02 = Vector3Tests.Vector3_ex02;
 
 public class VECTOR3SHOULD
 {
@@ -18,5 +19,18 @@ public class VECTOR3SHOULD
         
         // Then
         Assert.IsTrue(result == new Vector3(5, 0, 5));
+    }
+    
+    [Test]
+    public void Vector3IsNormal()
+    {
+        // Given
+        var testVector = new TestVector3Ex02();
+        
+        // When
+        var result = testVector.Check02(new Vector3(5,5,5));
+        
+        // Then
+        Assert.IsTrue(result == result.normalized);
     }
 }
