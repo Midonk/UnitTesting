@@ -84,4 +84,14 @@ public class TestBoolean
         var result = myBooleanTest.SharingBoar(25, 4);
         Assert.IsFalse(result);
     }
+
+    [Test]
+    public void LyingGame()
+    {
+        var myBooleanTest = new Boolean_ex04();
+
+        var result = myBooleanTest.LyingGame(true);
+
+        Assert.IsTrue(result);
+    }
 }

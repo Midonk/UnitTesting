@@ -18,7 +18,7 @@ namespace BooleanTest
             // en plusieurs morceaux afin d'en offrir à vos amis tout en 
             // veillant à ne pas gaspiller.
 
-            return (boarWeight % numberPeople) == 0;
+            return false;
         }
         #endregion
     }
