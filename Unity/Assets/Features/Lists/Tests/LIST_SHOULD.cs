@@ -46,14 +46,14 @@ public class LIST_SHOULD
     {
         //Given
         classroom = new List<Person>();
-        classroom.Add(new Person("Cherif", "Younis", "sanglier"));
+        classroom.Add(new Person("Cherif", "Younis", "Sanglier"));
         classroom.Add(new Person("Maxime", "Bellens", "Unknown"));
         classroom.Add(new Person("Robin", "Roekens", "Unknown"));
         classroom.Add(new Person("Hervé", "Chiera", "Unknown"));
 
         //When
 
-        var result = listClass.Ex03(classroom);
+        var result = listClass.WhoIsThatPerson(classroom);
 
         var answer = classroom.Find(x => x.FirstName == "Cherif");
 
@@ -64,7 +64,17 @@ public class LIST_SHOULD
     [Test]
     public void _ExList04()
     {
+        //Given
 
+        var data = classroom;
+
+        //When
+
+        var result = listClass.ThatEnemy(data);
+
+
+        //Then
+        Assert.IsTrue(result == "Sanglier");
 
     }
 
