@@ -2,17 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Array_ex01 : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
+namespace Arrays
+{ 
+    public class Array_ex01
     {
-        
-    }
+		#region Publics
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+		public int[] m_intArray;
+
+		#endregion
+
+
+		#region Constructor
+
+		public Array_ex01(int[] array)
+		{
+			m_intArray = array;
+		}
+
+		#endregion
+
+
+		#region Main
+
+		/// Nos renseignements ont obtenu plusieurs points d'intérêts sur le terrain
+		/// Nos ressources sont limitées et nous ne pourrons qu'en capturer un seul
+		/// Déterminer la valeur la plus haute contenue parmis ces points
+		public int GetHighestStrategicalValuePoint(int[] interestPoints)
+		{
+			return 2147483647;
+		}
+
+		#endregion
+	}
 }
