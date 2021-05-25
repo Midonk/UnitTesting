@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using TestVector3Ex01 = Vector3Tests.Vector3_ex01;
 using TestVector3Ex02 = Vector3Tests.Vector3_ex02;
+using TestVector3Ex03 = Vector3Tests.Vector3_ex03;
 
 public class VECTOR3SHOULD
 {
@@ -32,5 +33,21 @@ public class VECTOR3SHOULD
         
         // Then
         Assert.IsTrue(result == result.normalized);
+    }
+    
+    [Test]
+    public void Vector3Distance()
+    {
+        // Given
+        var testVector = new TestVector3Ex03();
+        
+        // When
+        var vect1 = new Vector3(2, 2, 2);
+        var vect2 = new Vector3(5, 5, 5);
+        
+        var result = testVector.Check03(vect1,vect2);
+        
+        // Then
+        Assert.IsTrue(result == Vector3.Distance(vect1,vect2));
     }
 }
