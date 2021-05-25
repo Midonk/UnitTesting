@@ -69,19 +69,19 @@ public class TestBoolean
     }
 
     [Test]
-    public void CuttingBoar()
+    public void SharingBoar()
     {
         var myBooleanTest = new Boolean_ex03();
 
-        var result = myBooleanTest.CuttingBoar(5, 25);
+        var result = myBooleanTest.SharingBoar(5, 25);
         Assert.IsTrue(result);
     }
     [Test]
-    public void CuttingBoar2()
+    public void SharingBoar2()
     {
         var myBooleanTest = new Boolean_ex03();
 
-        var result = myBooleanTest.CuttingBoar(25, 4);
+        var result = myBooleanTest.SharingBoar(25, 4);
         Assert.IsFalse(result);
     }
 }
