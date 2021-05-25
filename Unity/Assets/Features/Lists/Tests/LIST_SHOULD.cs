@@ -83,7 +83,7 @@ public class LIST_SHOULD
     {
         //Given
         List<Module> modules = new List<Module>();
-        modules.Add(new Module("Unity", 51));
+        modules.Add(new Module("Unity 3D", 51));
         modules.Add(new Module("Suivi Florence", 7));
         modules.Add(new Module("Certification Unity", 5));
         modules.Add(new Module("Gamejam", 10));
@@ -104,6 +104,22 @@ public class LIST_SHOULD
     [Test]
     public void _ExList06()
     {
+        //Given
+        PointObject center = new PointObject("center", new Vector3(0, 0, 0));
+        List<PointObject> objects = new List<PointObject>();
+        objects.Add(new PointObject("Object1", new Vector3(0, 5, 10)));
+        objects.Add(new PointObject("Object2", new Vector3(0, 10, 15)));
+        objects.Add(new PointObject("Object3", new Vector3(-5, 3, 8)));
+        objects.Add(new PointObject("Object4", new Vector3(-10, 0, 2)));
+
+
+        //When
+        var result = listClass.AroundTheCenter(center, objects);
+
+        var answer = objects.FindAll(x => Vector3.Distance(center.Pos, x.Pos) < 15);
+
+        //Then
+        Assert.IsTrue(answer.SequenceEqual(result));
 
 
     }

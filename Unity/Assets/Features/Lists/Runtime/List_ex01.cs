@@ -71,6 +71,17 @@ namespace ListSystem
 
 
 
+        /// 
+        /// Revenons en à Unity. Une scènbe comprend plusieurs objets autout d'un point centre. Il faut renvoyer une liste des objets se trouvant à moins de 10 mètres
+        /// de ce point central
+        /// 
+
+        public List<PointObject> AroundTheCenter(PointObject center, List<PointObject> objects)
+        {
+            return null;
+        }
+
+
         public List_ex01()
         {
 
@@ -102,6 +113,18 @@ namespace ListSystem
 
         public string Name;
         public int Length;
+    }
+
+    public struct PointObject
+    {
+        public PointObject(string name, Vector3 pos)
+        {
+            Name = name;
+            Pos = pos;
+        }
+
+        public string Name;
+        public Vector3 Pos;
     }
 
 }
