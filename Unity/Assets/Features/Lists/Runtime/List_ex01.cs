@@ -72,7 +72,7 @@ namespace ListSystem
 
 
         /// 
-        /// Revenons en à Unity. Une scènbe comprend plusieurs objets autout d'un point centre. Il faut renvoyer une liste des objets se trouvant à moins de 10 mètres
+        /// Revenons en à Unity. Une scène comprend plusieurs objets autout d'un point centre. Il faut renvoyer une liste des objets se trouvant à moins de 15 mètres
         /// de ce point central
         /// 
 
