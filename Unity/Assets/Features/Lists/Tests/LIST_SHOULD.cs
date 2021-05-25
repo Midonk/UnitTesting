@@ -8,6 +8,7 @@ using System.Linq;
 public class LIST_SHOULD
 {
     List_ex01 listClass = new List_ex01();
+    List<Person> classroom;
 
     [Test]
     public void _ExList01()
@@ -43,8 +44,21 @@ public class LIST_SHOULD
     [Test]
     public void _ExList03()
     {
+        //Given
+        classroom = new List<Person>();
+        classroom.Add(new Person("Cherif", "Younis", "sanglier"));
+        classroom.Add(new Person("Maxime", "Bellens", "Unknown"));
+        classroom.Add(new Person("Robin", "Roekens", "Unknown"));
+        classroom.Add(new Person("Hervé", "Chiera", "Unknown"));
 
+        //When
 
+        var result = listClass.Ex03(classroom);
+
+        var answer = classroom.Find(x => x.FirstName == "Cherif");
+
+        //Then
+        Assert.IsTrue(result.Equals(answer));
     }
 
     [Test]

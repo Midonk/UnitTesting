@@ -27,10 +27,35 @@ namespace ListSystem
 
 
 
+
+
+        /// Formidable, la liste est bien trièe, mais malheureusement, on n'en aura pas besoin :grins:. Il me faudrait que tu m'aides à récupérer une donnée.
+        /// Cette donnée est l'objet Person du formateur Unity actuel. 
+        /// 
+        public Person Ex03(List<Person> classroomList)
+        {
+            return new Person() ;
+        }
+
+
         public List_ex01()
         {
 
         }
 
+    }
+
+    public struct Person
+    {
+        public Person( string firstName, string lastName, string enemy)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Enemy = enemy;
+        }
+
+        public string FirstName;
+        public string LastName;
+        public string Enemy;
     }
 }
