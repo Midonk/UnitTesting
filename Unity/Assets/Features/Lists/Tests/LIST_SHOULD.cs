@@ -85,7 +85,7 @@ public class LIST_SHOULD
         //Given
 
         var date = DateTime.Now.ToString("dd/MM/yy");
-        Debug.Log(date);
+        
         var data = new List<string>() { date, "0830" };
 
         //When
