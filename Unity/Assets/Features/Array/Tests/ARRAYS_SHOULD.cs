@@ -186,10 +186,10 @@ public class ARRAYS_SHOULD
         // Given        
         var production = new string[] { "tools", "junk", "stone", "box", "weapon", "metal", "trash", "garbage" };
         int capacity = 3;
-        var ArrayEx04 = new Array_ex10();
+        var ArrayEx10 = new Array_ex10();
 
         // When 
-        var carrierInventory = ArrayEx04.RessourcesToWarehouses(production, capacity);
+        var carrierInventory = ArrayEx10.RessourcesToWarehouses(production, capacity);
 
         // Then
         Assert.IsTrue(carrierInventory[1,2] == "metal");
@@ -201,10 +201,10 @@ public class ARRAYS_SHOULD
         // Given        
         var production = new string[] { "stone", "weapon", "trash", "rock", "junk", "metal"};
         int capacity = 4;
-        var ArrayEx04 = new Array_ex10();
+        var ArrayEx10 = new Array_ex10();
 
         // When 
-        var carrierInventory = ArrayEx04.RessourcesToWarehouses(production, capacity);
+        var carrierInventory = ArrayEx10.RessourcesToWarehouses(production, capacity);
 
         // Then
         Assert.IsTrue(carrierInventory[1, 0] == "junk");
@@ -217,10 +217,10 @@ public class ARRAYS_SHOULD
         var production = new string[] { "trash", "junk", "tools", "rock", "junk", "metal" };
         
         int capacity = 5;
-        var ArrayEx04 = new Array_ex10();
+        var ArrayEx10 = new Array_ex10();
 
         // When 
-        var carrierInventory = ArrayEx04.RessourcesToWarehouses(production, capacity);
+        var carrierInventory = ArrayEx10.RessourcesToWarehouses(production, capacity);
 
         // Then
         Assert.IsNull(carrierInventory[1, 3]);
