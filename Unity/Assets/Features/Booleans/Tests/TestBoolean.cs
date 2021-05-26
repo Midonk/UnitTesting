@@ -157,5 +157,24 @@ public class TestBoolean
 
         Assert.IsTrue(result);
     }
+    [Test]
+    public void SaveHisLife()
+    {
+        var myBooleanTest = new Boolean_ex08();
+        var result = myBooleanTest.SaveHisLife("Mamie", "canne");
+
+        Assert.IsTrue(result);
+
+    }
+
+    [Test]
+    public void SaveHisLife2()
+    {
+        var myBooleanTest = new Boolean_ex08();
+        var result = myBooleanTest.SaveHisLife("Racaille", "Canne");
+
+        Assert.IsFalse(result);
+
+    }
 
 }
