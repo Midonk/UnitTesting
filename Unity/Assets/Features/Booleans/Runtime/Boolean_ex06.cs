@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boolean_ex06 : MonoBehaviour
+public class Boolean_ex06
 {
     public bool AmIBigger(float me, float him)
     {
