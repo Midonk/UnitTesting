@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Vector3Tests
 {
-    public class Vector3_ex08 : MonoBehaviour
+    public class Vector3_ex08
     {
         /// <summary>
         ///  Super, je peux voir ma tete !
