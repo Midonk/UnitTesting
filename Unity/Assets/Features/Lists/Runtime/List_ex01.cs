@@ -4,6 +4,10 @@ using UnityEngine;
 
 namespace ListSystem
 {
+    /// <summary>
+    /// Avannt de commencer, il peut être judicieux de consulter la documentation C# sur Linq
+    /// </summary>
+    /// 
     public class List_ex01
     {
         ///Bonjour à toi, jeune apprenti. Avant de commencer, j'ai besoin que tu me fournisse deux données. J'ai besoin de la date du jour (en format string mmjjaa)
@@ -11,6 +15,8 @@ namespace ListSystem
         ///
         public List<string> TellMeThat()
         {
+
+            
             return null;
         }
 
@@ -81,6 +87,16 @@ namespace ListSystem
             return null;
         }
 
+        /// <summary>
+        /// Dans la  liste précédente, il existe plusieurs types d'objets. Nous ne souhaitons garder que les objets qui ont le tag enemy.
+        /// </summary>
+        /// 
+        public List<PointObject> FilterTheList(List<PointObject> list)
+        {
+
+            return list;
+        }
+
 
         public List_ex01()
         {
@@ -117,14 +133,16 @@ namespace ListSystem
 
     public struct PointObject
     {
-        public PointObject(string name, Vector3 pos)
+        public PointObject(string name, Vector3 pos, string tag)
         {
             Name = name;
             Pos = pos;
+            Tag = tag;
         }
 
         public string Name;
         public Vector3 Pos;
+        public string Tag;
     }
 
 }
