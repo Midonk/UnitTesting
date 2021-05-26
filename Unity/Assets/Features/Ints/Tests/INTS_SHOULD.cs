@@ -34,4 +34,17 @@ public class INTS_SHOULD
         //then
         Assert.IsTrue(intPhone == result);
     }
+
+    [Test]
+    public void TEST_EX03()
+    {
+        //given
+        var testInt02 = new Ints.Int_Ex03();
+
+        //when
+        var result = testInt02.ChangeMoney(3.45f);
+
+        //then
+        Assert.IsTrue(3 == result);
+    }
 }
