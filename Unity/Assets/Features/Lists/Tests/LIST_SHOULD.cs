@@ -4,10 +4,21 @@ using UnityEngine;
 using ListSystem;
 using NUnit.Framework;
 using System.Linq;
+using System;
 
 public class LIST_SHOULD
 {
-    ListClass listClass = new ListClass();
+    List_ex01 Ex01 = new List_ex01();
+    List_ex02 Ex02 = new List_ex02();
+    List_ex03 Ex03 = new List_ex03();
+    List_ex04 Ex04 = new List_ex04();
+    List_ex05 Ex05 = new List_ex05();
+    List_ex06 Ex06 = new List_ex06();
+    List_ex07 Ex07 = new List_ex07();
+    List_ex08 Ex08 = new List_ex08();
+    List_ex09 Ex09 = new List_ex09();
+    List_ex10 Ex10 = new List_ex10();
+
     List<Person> classroom;
     List<Module> listModules;
     List<PointObject> objects;
@@ -70,11 +81,17 @@ public class LIST_SHOULD
     [Test]
     public void _ExList01()
     {
+        
         //Given
-        var data = new List<string>() { "250521", "0830" };
+
+        var date = DateTime.Now.ToString("dd/MM/yy");
+        Debug.Log(date);
+        var data = new List<string>() { date, "0830" };
 
         //When
-        var result = listClass.TellMeThat();
+        var result = Ex01.TellMeThat();
+
+        
 
         //Then
         Assert.IsTrue(data.SequenceEqual(result));
@@ -83,17 +100,17 @@ public class LIST_SHOULD
     [Test]
     public void _ExList02()
     {
-        /*//Given
+        //Given
         var data = listInt.ToList();
 
         //When
-        //var result = listClass.HelpMeToSort(data);
+        var result = Ex02.HelpMeToSort(data);
 
         listInt.Sort();
 
 
         //Then
-        Assert.IsTrue(listInt.SequenceEqual(result));*/
+        Assert.IsTrue(listInt.SequenceEqual(result));
 
     }
 
@@ -106,7 +123,7 @@ public class LIST_SHOULD
 
         //When
 
-        var result = listClass.WhoIsThatPerson(data);
+        var result = Ex03.WhoIsThatPerson(data);
 
         var answer = classroom.Find(x => x.FirstName == "Cherif");
 
@@ -123,7 +140,7 @@ public class LIST_SHOULD
 
         //When
 
-        var result = listClass.ThatEnemy(data);
+        var result = Ex04.ThatEnemy(data);
 
 
         //Then
@@ -139,7 +156,7 @@ public class LIST_SHOULD
         var data = listModules.ToList();
 
         //When
-        var result = listClass.CheckModules(data);
+        var result = Ex05.CheckModules(data);
 
         var answer = listModules.FindAll(x => x.Length <= 14 && x.Name.Contains("Unity"));
 
@@ -160,7 +177,7 @@ public class LIST_SHOULD
         var data = objects.ToList();
 
         //When
-        var result = listClass.AroundTheCenter(center, data);
+        var result = Ex06.AroundTheCenter(center, data);
 
         var answer = objects.FindAll(x => Vector3.Distance(center.Pos, x.Pos) < 15);
 
@@ -179,7 +196,7 @@ public class LIST_SHOULD
         List<PointObject> data = objects.ToList();
 
         //When
-        var result = listClass.FilterTheList(data);
+        var result = Ex07.FilterTheList(data);
 
         var answer = objects.FindAll(x => x.Tag == "enemy");
 
@@ -192,7 +209,7 @@ public class LIST_SHOULD
     public void _ExList08()
     {
         //Given 
-        var result = listClass.MergeTheLists(listProduct1, listProduct2, listProduct3);
+        var result = Ex08.MergeTheLists(listProduct1, listProduct2, listProduct3);
 
         //When
 
@@ -211,7 +228,7 @@ public class LIST_SHOULD
     {
         //Given
         var data = classroom.ToList();
-        var result = listClass.SortTheClassRoomList(data);
+        var result = Ex09.SortTheClassRoomList(data);
 
         //When
         classroom.Sort(delegate (Person x, Person y) {
@@ -228,7 +245,7 @@ public class LIST_SHOULD
         //Given
 
         //When
-        var result = listClass.CheckTheDuplicate(classroom);
+        var result = Ex10.CheckTheDuplicate(classroom);
 
         //Then
         Assert.IsTrue(result.Key.FirstName.Equals(classroom.Find(x => x.FirstName == "Cherif").FirstName) && result.Value == 2);

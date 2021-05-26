@@ -1,18 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ListSystem;
 
-public class List_ex09 : MonoBehaviour
+public class List_ex09
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    /// Pour en revenir à la liste de la formation, j'aurais besoin qu'elle soit triée, mais par rapport au prénom de la personne.
 
-    // Update is called once per frame
-    void Update()
+    public List<Person> SortTheClassRoomList(List<Person> list)
     {
-        
+
+        return list;
     }
 }

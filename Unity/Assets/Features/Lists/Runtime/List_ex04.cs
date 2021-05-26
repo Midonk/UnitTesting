@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ListSystem;
 
-public class List_ex04 : MonoBehaviour
+public class List_ex04
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    /// J'ai entendu une drole d'histoire à propos de cette personne. Mais attends, qui était-ce déjà ? Zut j'ai la mémoire courte. 
+    /// Mais je sais que l'on peut trouver le nom de son pire enemi. 
+    /// 
 
-    // Update is called once per frame
-    void Update()
+    public string ThatEnemy(List<Person> classroomList)
     {
-        
+
+        return "";
     }
 }

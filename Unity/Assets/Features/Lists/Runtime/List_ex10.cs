@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ListSystem;
 
-public class List_ex10 : MonoBehaviour
+public class List_ex10
 {
-    // Start is called before the first frame update
-    void Start()
+    /// <summary>
+    /// Enfin, un doublon s'était glissé dans la liste du Troisième exercice, renvoyez moi l'objet person, ainsi que le nombre d'occurences.
+    /// </summary>
+    /// 
+    public KeyValuePair<Person, int> CheckTheDuplicate(List<Person> list)
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return new KeyValuePair<Person, int>();
     }
 }
