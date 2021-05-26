@@ -13,7 +13,7 @@ using TestVector3Ex05 = Vector3Tests.Vector3_ex05;
 public class VECTOR3SHOULD
 {
     [Test]
-    public void Vector3Values()
+    public void WhereAmI()
     {
         // Given
         var testVector = new TestVector3Ex01();

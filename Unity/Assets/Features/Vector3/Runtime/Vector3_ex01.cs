@@ -9,9 +9,11 @@ namespace Vector3Tests
     {
         #region Main
 
-        /// Nous recevons un Vector3 "value" mais nous ne connaissons pas ses valeurs.
-        /// Nous savons que le Vector3 a renvoyer aura pour valeur en x : 5, en y : 0, en z : 5;
-        /// Renvoyer ce Vector3 value avec les bonnes valeurs.
+        /// Mais ou suis je. Cette biere devait etre celle de trop, je pense avoir fait un black out.
+        /// Il faut que je me repere.
+        /// En fouillant mes poches, je me rend compte qu'il y a un message sur un bout de papier.
+        /// Celui-ci est intitule : "value" et il y a ecrit : "Retourne une nouvelle position qui aura en  en x : 5, en y : 0, en z : 5"
+        /// Le message est signe "X"
         public Vector3 Check01(Vector3 value)
         {
             
