@@ -5,10 +5,10 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using TestFloat01 = Float.Float_ex01;
 
-public class Test01
+public class FloatTest01
 {
     [Test]
-    public void TEST_EX01()
+    public void TEST_FLOAT_EX01()
     {
         // Given
         var myTestFloat = new TestFloat01(2019f);
