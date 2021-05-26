@@ -140,5 +140,22 @@ public class TestBoolean
         Assert.IsFalse(result);
     }
 
+    [Test]
+    public void BouncingTime()
+    {
+        var myBooleanTest = new Boolean_ex07();
+        var result = myBooleanTest.BouncingTime(7);
+
+        Assert.IsFalse(result);
+    }
+
+    [Test]
+    public void BouncingTime2()
+    {
+        var myBooleanTest = new Boolean_ex07();
+        var result = myBooleanTest.BouncingTime(18);
+
+        Assert.IsTrue(result);
+    }
 
 }

@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boolean_ex06
+namespace BooleanTest
 {
-    public bool AmIBigger(float me, float him)
+    public class Boolean_ex06
     {
-        //vous êtes en maternelle et votre nemesis de 
-        // la cours de récré vous menace mais vous vous 
-        // démontez par car vous savez que le plus grand 
-        // gagne toujours selon les dures lois de la cours de récré
-        // Avez-vous raison de pensez cela ?
+        public bool AmIBigger(float me, float him)
+        {
+            //vous êtes en maternelle et votre nemesis de 
+            // la cours de récré vous menace mais vous vous 
+            // démontez par car vous savez que le plus grand 
+            // gagne toujours selon les dures lois de la cours de récré
+            // Avez-vous raison de pensez cela ?
 
-        return true;
+            return true;
+        }
     }
+
 }
