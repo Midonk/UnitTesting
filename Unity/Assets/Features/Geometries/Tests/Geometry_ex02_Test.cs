@@ -51,6 +51,7 @@ public class Geometry_ex02_Test
     }
 
     #endregion
+    
 
     #region Private
     private Geometry_ex02 _Ganondorf;

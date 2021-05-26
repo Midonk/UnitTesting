@@ -60,6 +60,7 @@ public class Geometry_ex01_Test
     }
 
     #endregion
+    
 
     #region Private
     private Geometry_ex01 _shapeSquare;
