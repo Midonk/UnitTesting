@@ -7,6 +7,8 @@ using TestVector3Ex01 = Vector3Tests.Vector3_ex01;
 using TestVector3Ex02 = Vector3Tests.Vector3_ex02;
 using TestVector3Ex03 = Vector3Tests.Vector3_ex03;
 using TestVector3Ex04 = Vector3Tests.Vector3_ex04;
+using TestVector3Ex05 = Vector3Tests.Vector3_ex05;
+
 
 public class VECTOR3SHOULD
 {
@@ -66,5 +68,21 @@ public class VECTOR3SHOULD
 
         // Then
         Assert.IsTrue(result == direction * speed);
+    }
+
+    [Test]
+    public void Check05()
+    {
+        // Given
+        var testVector = new TestVector3Ex05();
+
+        // When
+        var position = new Vector3(5, 0, 5);
+        var velocity = new Vector3(3, 2, 1) * 2.5f;
+
+        var result = testVector.Check05(position, velocity);
+
+        // Then
+        Assert.IsTrue(result == position + velocity);
     }
 }
