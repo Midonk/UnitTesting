@@ -55,7 +55,7 @@ public class VECTOR3SHOULD
     }
 
     [Test]
-    public void Vector3Velocity()
+    public void InVelocityITrust()
     {
         // Given
         var testVector = new TestVector3Ex04();
@@ -71,7 +71,7 @@ public class VECTOR3SHOULD
     }
 
     [Test]
-    public void Check05()
+    public void WalkLikeANinja()
     {
         // Given
         var testVector = new TestVector3Ex05();

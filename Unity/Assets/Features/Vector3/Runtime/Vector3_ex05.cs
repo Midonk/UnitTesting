@@ -9,7 +9,9 @@ namespace Vector3Tests
         #region Main
 
         /// <summary>
-        /// J'ai ce qu il me faut pour avancer, ne me reste plus qu'a courrir dans la bonne direction !
+        /// J'ai ce qu il me faut pour avancer [ma position et une velocity],
+        /// ne me reste plus qu'a me faufiller [avancer] dans cette direction tel un ninja !
+        /// Bientot, je pourrais voir mon reflet dans ce miroir !
         /// </summary>
         public Vector3 Check05(Vector3 position, Vector3 velocity)
         {
