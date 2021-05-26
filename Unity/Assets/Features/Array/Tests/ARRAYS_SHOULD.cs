@@ -181,6 +181,20 @@ public class ARRAYS_SHOULD
     }
 
     [Test]
+    public void RETURN_INVERSE_ARRAY()
+    {
+        // Given        
+        var code = new int[] { 1, 2, 3, 4, 5 };
+        var ArrayEx06 = new Array_ex06();
+
+        // When
+        var result = ArrayEx06.RevertCode(code);
+
+        // Then
+        Assert.IsTrue(result[1] == 4);
+    }
+
+    [Test]
     public void HAVE_METAL_AT_INDEX_1_2_IN_2D_ARRAY()
     {
         // Given        
