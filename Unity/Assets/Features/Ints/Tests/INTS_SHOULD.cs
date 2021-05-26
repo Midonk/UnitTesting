@@ -61,4 +61,17 @@ public class INTS_SHOULD
         //then
         Assert.IsTrue(result == 2);
     }
+
+    [Test]
+    public void TEST_EX05()
+    {
+        //given
+        var testInt05 = new Ints.Int_Ex05();
+
+        //when
+        var result = testInt05.IntMaximum();
+
+        //then
+        Assert.IsTrue(result == int.MaxValue);
+    }
 }
