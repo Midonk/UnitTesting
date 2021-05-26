@@ -121,4 +121,24 @@ public class TestBoolean
 
         Assert.IsTrue(result);
     }
+
+    [Test]
+    public void AmIBigger()
+    {
+        var myBooleanTest = new Boolean_ex06();
+        var result = myBooleanTest.AmIBigger(1.15f, 1.13f);
+
+        Assert.IsTrue(result);
+    }
+
+    [Test]
+    public void AmIBigger2()
+    {
+        var myBooleanTest = new Boolean_ex06();
+        var result = myBooleanTest.AmIBigger(1.07f, 1.13f);
+
+        Assert.IsFalse(result);
+    }
+
+
 }
