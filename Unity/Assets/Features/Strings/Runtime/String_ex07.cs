@@ -13,7 +13,7 @@ namespace String_exo07
         public string TryOut()
         {
             var joie = "tout à fait";
-            return joie.ToUpper();
+            return "votre réponse";
         }
 
         #endregion
