@@ -1,10 +1,4 @@
-using System;
-using System.Dynamic;
-using System.Collections;
-using System.Collections.Generic;
 using NUnit.Framework;
-using UnityEngine;
-using UnityEngine.TestTools;
 using Geometries.Runtime;
 
 public class Geometry_ex04_Test
