@@ -68,12 +68,12 @@ public class ARITHMETICS_SHOULD
     public void SOLVE05()
     {
         // Given
-        var myArithmetics = new Ex05(new Vector2(2.0f, 10.0f));
+        var myArithmetics = new Ex05(10.0f);
 
         // When
-        var result = myArithmetics.CalculateWaves(Mathf.Lerp(2f, 10f, Time.time));
+        var result = myArithmetics.CalculateWaves(Mathf.Lerp(1.5f, 10f, Time.time));
 
         // Then
-        Assert.IsTrue(result == Mathf.Lerp(2f, 10f, Time.time));
+        Assert.IsTrue(result == Mathf.Lerp(1.5f, 10f, Time.time));
     }
 }
