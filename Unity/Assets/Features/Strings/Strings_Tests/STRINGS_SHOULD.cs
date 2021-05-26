@@ -77,7 +77,7 @@ public class STRINGS_SHOULD
     {
         var myTryOut = new String_e08();
         var answer8 = myTryOut.TryOut();
-        Assert.IsTrue(answer8 == "");
+        Assert.IsTrue(answer8 == "je suis le meurtrieur");
     }
 
     [Test]

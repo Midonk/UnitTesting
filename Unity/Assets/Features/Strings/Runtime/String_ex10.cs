@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class String_ex10 : MonoBehaviour
+namespace String_exo10
 {
-    // Start is called before the first frame update
-    void Start()
+    public class String_exo10
     {
-        
-    }
+        #region Main
+        //
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public string TryOut()
+        {
+            return "à nous tu mens mais moi j't'ai remonté";
+        }
+
+        #endregion
     }
 }
