@@ -8,6 +8,7 @@ using Ex01 = Arithmetics.Arithmetic_ex01;
 using Ex02 = Arithmetics.Arithmetic_ex02;
 using Ex03 = Arithmetics.Arithmetic_ex03;
 using Ex04 = Arithmetics.Arithmetic_ex04;
+using Ex05 = Arithmetics.Arithmetic_ex05;
 
 public class ARITHMETICS_SHOULD
 {
@@ -61,5 +62,18 @@ public class ARITHMETICS_SHOULD
 
         // Then
         Assert.IsTrue(result == (Mathf.PingPong(2, 1.5f)));
+    }
+
+    [Test]
+    public void SOLVE05()
+    {
+        // Given
+        var myArithmetics = new Ex05(new Vector2(2.0f, 10.0f));
+
+        // When
+        var result = myArithmetics.CalculateWaves(Mathf.Lerp(2f, 10f, Time.time));
+
+        // Then
+        Assert.IsTrue(result == Mathf.Lerp(2f, 10f, Time.time));
     }
 }
