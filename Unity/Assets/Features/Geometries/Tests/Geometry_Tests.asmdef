@@ -1,5 +1,5 @@
 {
-    "name": "Tests",
+    "name": "Geometry_Tests",
     "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",
@@ -17,7 +17,7 @@
     ],
     "autoReferenced": false,
     "defineConstraints": [
-        "UNITY_INCLUDE_TESTS"
+        "UNITY_INCLUDE_GEOMETRY_TESTS"
     ],
     "versionDefines": [],
     "noEngineReferences": false
