@@ -9,7 +9,7 @@ namespace Arrays
 		/// Il est capable de tirer mais le chargement du tir doit être chargé par plusieurs réacteurs à la suite
 		/// Un réacteur non-activé annulera le chargement du tir
 		/// Déterminer si le canon pourra tirer ou non
-		public bool OrbitalCanonCanShoot(bool[] activatedReactors, int minimumLoad)
+		public bool OrbitalCanonCanShoot(bool[] activeReactors, int minimumLoad)
 		{
 			return false;
 		}

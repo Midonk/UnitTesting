@@ -152,13 +152,13 @@ public class ARRAYS_SHOULD
     public void RETURN_TRUE()
     {
         // Given        
-        var activatedReactors = new bool[] { true, false, true, true, true, true, false };
+        var activeReactors = new bool[] { true, false, true, true, true, true, false };
 
         int minimumLoad = 4;
         var ArrayEx05 = new Array_ex05();
 
         // When
-        var result = ArrayEx05.OrbitalCanonCanShoot(activatedReactors, minimumLoad);
+        var result = ArrayEx05.OrbitalCanonCanShoot(activeReactors, minimumLoad);
 
         // Then
         Assert.IsTrue(result);
@@ -168,13 +168,13 @@ public class ARRAYS_SHOULD
     public void RETURN_FALSE()
     {
         // Given        
-        var activatedReactors = new bool[] { true, true, false, true, true};
+        var activeReactors = new bool[] { true, true, false, true, true};
 
         int minimumLoad = 3;
         var ArrayEx05 = new Array_ex05();
 
         // When
-        var result = ArrayEx05.OrbitalCanonCanShoot(activatedReactors, minimumLoad);
+        var result = ArrayEx05.OrbitalCanonCanShoot(activeReactors, minimumLoad);
 
         // Then
         Assert.IsFalse(result);
