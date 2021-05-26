@@ -10,7 +10,7 @@ namespace Arrays
 
 		/// Inverser les index du tableau
 		/// (Oui j'avais pas d'idée)
-		public int[] RevertCode(int[] array)
+		public int[] RevertArray(int[] array)
 		{
 			return new int[0];
 		}
