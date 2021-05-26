@@ -164,7 +164,6 @@ public class TestBoolean
         var result = myBooleanTest.SaveHisLife("Mamie", "canne");
 
         Assert.IsTrue(result);
-
     }
 
     [Test]
@@ -174,7 +173,13 @@ public class TestBoolean
         var result = myBooleanTest.SaveHisLife("Racaille", "Canne");
 
         Assert.IsFalse(result);
-
     }
+
+    /*     [Test]
+        public void IsContainThePattern(){
+            string text 
+            var myBooleanTest = new Boolean_ex09();
+            var result = myBooleanTest.IsContainThePattern()
+        }  */
 
 }
