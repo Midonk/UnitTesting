@@ -12,6 +12,7 @@ public class LIST_SHOULD
     List<Module> listModules;
     List<PointObject> objects;
     List<int> listInt;
+    List<Product> listProduct1, listProduct2, listProduct3;
 
     [SetUp]
     public void SetUp()
@@ -38,6 +39,23 @@ public class LIST_SHOULD
         objects.Add(new PointObject("Object4", new Vector3(-10, 0, 2), "enemy"));
         objects.Add(new PointObject("Object5", new Vector3(-10, 0, 2), "furniture"));
         objects.Add(new PointObject("Object6", new Vector3(-10, 0, 2), "enemy"));
+
+        listProduct1 = new List<Product>();
+        listProduct1.Add(new Product("Ecran MSI", "ecran", 215.99f));
+        listProduct1.Add(new Product("Ecran BenQ", "ecran", 198.99f));
+        listProduct1.Add(new Product("Corsair Vengeance RGB", "memoire", 250.50f));
+        listProduct1.Add(new Product("MSI RTX 2080Ti", "gpu", 1350.99f));
+        listProduct1.Add(new Product("Corsair void Elite", "casque", 99.99f));
+
+        listProduct2 = listProduct1.ToList();
+        listProduct2.Add(new Product("Intel core i7 10700K", "cpu", 560.99f)); 
+        listProduct2.Add(new Product("Thermaltake Water 3.0 360", "watercooling", 225.99f));
+
+        listProduct3 = listProduct2.ToList();
+        listProduct3.Add(new Product("Ryzen 9 5950X", "cpu", 459.99f));
+        listProduct3.Add(new Product("Corsair HX850", "psu", 225.99f));
+
+
 
     }
 
@@ -165,7 +183,21 @@ public class LIST_SHOULD
     [Test]
     public void _ExList08()
     {
+        //Given 
+        var result = listClass.MergeTheLists(listProduct1, listProduct2, listProduct3);
 
+        //When
+
+        var answer = listProduct1.Union(listProduct2).Union(listProduct3).ToList();
+
+        foreach (Product item in answer)
+        {
+            Debug.Log(item.Name + "-" + item.Category);
+        }
+
+        //Then
+
+        Assert.IsTrue(answer.SequenceEqual(result));
 
     }
 

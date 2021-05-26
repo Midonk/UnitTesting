@@ -24,12 +24,32 @@ namespace ListSystem
 
 
 
+
+
+
+
+
+
+
+
+
+
         /// Bien, maintenant que j'ai ces données, J'ai un service à te demander. J'ai besoin de trier une liste que je te passe en paramètre. Peux-tu m'aider ? 
 
         public List<int> HelpMeToSort(List<int> listToSort)
         {
             return listToSort;
         }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -42,6 +62,18 @@ namespace ListSystem
         {
             return new Person() ;
         }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -65,6 +97,16 @@ namespace ListSystem
 
 
 
+
+
+
+
+
+
+
+
+
+
         /// Bien, voyons un peu plus grand maintenant. Et changeons completement de sujet. Quels sont les modules de la formation qui durent le moins longtemps.
         /// Disons, moins de 14 jours et qui est à propos de Unity.
 
@@ -72,6 +114,16 @@ namespace ListSystem
         {
             return null;
         }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -87,6 +139,17 @@ namespace ListSystem
             return null;
         }
 
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Dans la  liste précédente, il existe plusieurs types d'objets. Nous ne souhaitons garder que les objets qui ont le tag enemy.
         /// </summary>
@@ -96,6 +159,36 @@ namespace ListSystem
 
             return list;
         }
+
+
+
+
+
+        /// <summary>
+        /// Rhaaaa. Le stagiaire ne fait que des bétises et au lieu de mettre a jour la liste de produits, il en a créé deux autres avec plein de doublons.
+        /// Aide moi a fusionner tout cà afin qu'il n'y ait plus qu'une liste mais sans les doublons
+        /// </summary>
+        /// 
+        public List<Product> MergeTheLists(List<Product> list1, List<Product> list2, List<Product> list3)
+        {
+
+            return new List<Product>();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         public List_ex01()
@@ -143,6 +236,21 @@ namespace ListSystem
         public string Name;
         public Vector3 Pos;
         public string Tag;
+    }
+
+    public struct Product
+    {
+        public Product(string name, string category, float price)
+        {
+            Name = name;
+            Category = category;
+            Price = price;
+        }
+
+        public string Name;
+        public string Category;
+        public float Price;
+
     }
 
 }
