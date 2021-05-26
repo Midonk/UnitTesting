@@ -106,7 +106,7 @@ public class VECTOR3SHOULD
         Assert.IsTrue(result == (mirrorPosition - myPosition) );
     } 
     [Test]
-    public void DrunkRotationNightmare()
+    public void DrunkInterpolationNightmare()
     {
         // Given
         var testVector = new TestVector3Ex07();
