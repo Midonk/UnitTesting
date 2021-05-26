@@ -93,6 +93,6 @@ public class STRINGS_SHOULD
     {
         var myTryOut = new String_e10();
         var answer10 = myTryOut.TryOut();
-        Assert.IsTrue(answer10 == "");
+        Assert.IsTrue(answer10 == "strings");
     }
 }
