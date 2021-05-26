@@ -15,7 +15,7 @@ using UnityEngine;
 /// le relais est orienté complètement à gauche et vous décider de l'orienter complètement à droite
 /// </summary>
 
-namespace TestSystem
+namespace QuaternionTestSystem
 {
     public class Quaternion_ex04
     {

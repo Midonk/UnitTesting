@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using NUnit.Framework;
 
-using SystemToTest = TestSystem.Quaternion_ex03;
+using SystemToTest = QuaternionTestSystem.Quaternion_ex03;
 
 public class QE03 : MonoBehaviour
 {

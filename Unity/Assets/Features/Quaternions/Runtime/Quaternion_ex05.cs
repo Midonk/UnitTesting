@@ -17,7 +17,7 @@ using UnityEngine;
 /// et donnez le reste en tant que code de sécurité
 /// </summary>
 
-namespace TestSystem
+namespace QuaternionTestSystem
 {
     public class Quaternion_ex05
     {

@@ -16,7 +16,7 @@ using UnityEngine;
 /// Le relais est dans la rotation -30° sur son axe vertical vous devez revenir à la rotation de 30° avec un écart maximum de 1° d'erreur !
 /// </summary>
 
-namespace TestSystem
+namespace QuaternionTestSystem
 {
     public class Quaternion_ex03
     {

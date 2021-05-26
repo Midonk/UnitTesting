@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 ///
 /// </summary>
-namespace TestSystem
+namespace QuaternionTestSystem
 {
     public class Quaternion_ex06
     {

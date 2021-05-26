@@ -17,7 +17,7 @@ using UnityEngine;
 /// Il vous faut envoyer une commande sous forme de Quaternion en prenant l'inverse de la premiere commande pour que le miroir du satellite puisse être orienter dans le bon sens.
 /// </summary>
 
-namespace TestSystem
+namespace QuaternionTestSystem
 {
     public class Quaternion_ex02
     {
