@@ -279,6 +279,40 @@ public class ARRAYS_SHOULD
     }
 
     [Test]
+    public void EX09_RETURN_15_FROM_ARRAY()
+    {
+        // Given
+        var ArrayEx09 = new Array_ex09();
+        var minerals = new Vector3Int[] { new Vector3Int(0, 2, 4), // 8
+                                       new Vector3Int(1, 5, 2), // 12
+                                       new Vector3Int(10, 5, 1), // 15
+                                       new Vector3Int(2, 2, 1) }; // 4
+
+        // When
+        var result = ArrayEx09.MineralsProcessingFactory(minerals);
+
+        // Then
+        Assert.IsTrue(result[2] == 15);
+    }
+
+    [Test]
+    public void EX09_RETURN_0_FROM_ARRAY()
+    {
+        // Given
+        var ArrayEx09 = new Array_ex09();
+        var minerals = new Vector3Int[] { new Vector3Int(0, 1, 1), // 1
+                                       new Vector3Int(1, 1, 0), // 0
+                                       new Vector3Int(5, 2, 1), // 7
+                                       new Vector3Int(2, 1, 3) }; // 9
+
+        // When
+        var result = ArrayEx09.MineralsProcessingFactory(minerals);
+
+        // Then
+        Assert.IsTrue(result[1] == 0);
+    }
+
+    [Test]
     public void EX10_HAVE_METAL_AT_INDEX_1_2_IN_2D_ARRAY()
     {
         // Given        
