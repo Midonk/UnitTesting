@@ -14,6 +14,7 @@ using TestVector3Ex06 = Vector3Tests.Vector3_ex06;
 using TestVector3Ex07 = Vector3Tests.Vector3_ex07;
 using TestVector3Ex08 = Vector3Tests.Vector3_ex08;
 using TestVector3Ex09 = Vector3Tests.Vector3_ex09;
+using TestVector3Ex10 = Vector3Tests.Vector3_ex10;
 
 
 public class VECTOR3SHOULD
@@ -161,15 +162,30 @@ public class VECTOR3SHOULD
     {
         // Given
         var testVector = new TestVector3Ex09();
-    
+
         // When
         var dogHead1 = new Vector3(3, 0, 5);
         var dogHead2 = new Vector3(6, 0, 5);
-    
-        var result = testVector.TheCrucialAngle(dogHead1,dogHead2);
+
+        var result = testVector.TheCrucialAngle(dogHead1, dogHead2);
         
-    
         // Then
-        Assert.IsTrue(result ==  Vector3.Angle(dogHead1,dogHead2));
+        Assert.IsTrue(result == Vector3.Angle(dogHead1, dogHead2));
+    }
+
+    [Test]
+    public void TheMightyVector()
+    {
+        // Given
+        var testVector = new TestVector3Ex10();
+
+        var vector1 = new Vector3(5, 0, 5);
+        var vector2 = new Vector3(10, 1, 2);
+
+        // When
+        var result = testVector.TheMightyVector(vector1, vector2);
+        
+        // Then
+        Assert.IsTrue(result == Vector3.Max(vector1, vector2));
     }
 }
