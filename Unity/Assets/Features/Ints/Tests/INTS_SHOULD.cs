@@ -53,10 +53,10 @@ public class INTS_SHOULD
     {
         //given
         var testInt04 = new Ints.Int_Ex04();
-        var Car = new string[] { "Blue", "Green", "Red", "Yellow", "Black" };
+        var car = new string[] { "Blue", "Green", "Red", "Yellow", "Black" };
 
         //when
-        var result = testInt04.Parking(Car);
+        var result = testInt04.Parking(car);
 
         //then
         Assert.IsTrue(result == 2);
@@ -74,4 +74,19 @@ public class INTS_SHOULD
         //then
         Assert.IsTrue(result == int.MaxValue);
     }
+
+    //[Test]
+    //public void TEST_EX06()
+    //{
+    //    //given
+    //    var testInt06 = new Ints.Int_Ex06();
+    //    var catYearOld = new string[] { "Blue", "Green", "Red", "Yellow", "Black" };
+    //    var dogYearOld = new string[] { "Blue", "Green", "Red", "Yellow", "Black" };
+
+    //    //when
+    //    var result = testInt06.IntMaximum();
+
+    //    //then
+    //    Assert.IsTrue(result == int.MaxValue);
+    //}
 }
