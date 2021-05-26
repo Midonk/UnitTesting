@@ -14,7 +14,7 @@ using UnityEngine;
 /// vous leur demander via une simple liaison radio de corriger l'axe
 /// du canon pour viser le premier satellite relais
 ///
-/// [outils]
+/// [Level Design]
 ///     canon à photon
 ///     satellite
 ///     ISS
@@ -49,6 +49,7 @@ namespace TestSystem
 
         public Quaternion ApplyRotationOnY(Quaternion value)
         {
+            Debug.Log($"<color=Orange>{Quaternion.Lerp(Quaternion.Euler(13, 3, 21), Quaternion.Euler(26, 5, 21), 1)}</color>");
             //réponse attendue :
             //return Quaternion.Euler(0, 30, 0);
             return value;

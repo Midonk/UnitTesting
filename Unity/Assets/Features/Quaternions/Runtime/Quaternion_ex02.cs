@@ -8,8 +8,8 @@ using UnityEngine;
 /// vous pouvez maintenant lui envoyer des commandes via le flux de particules photon
 /// vous devez maintenant tourner orienter ce relais.
 ///
-/// [outils]
-///     canon à photon
+/// [Level Design]
+///     source de photon
 ///     satellites
 ///     relais à photon
 ///

@@ -4,15 +4,15 @@ using UnityEngine;
 
 /// <summary>
 /// [Infos]
+/// vous devez tourner horizontalement ce relais pour qu'il puisse envoyer la lumière vous souhaitez
 ///
-///
-/// [level Design]
-/// mise en scene
-/// porte
-/// satellites
+/// [Level Design]
+///     source de photon
+///     satellites
+///     relais à photon
 ///
 /// [énigme]
-/// vous voyez un crane qui regarde à gauche et décidez de le tourner vers la droite
+/// le relais est orienté complètement à gauche et vous décider de l'orienter complètement à droite
 /// </summary>
 
 namespace TestSystem

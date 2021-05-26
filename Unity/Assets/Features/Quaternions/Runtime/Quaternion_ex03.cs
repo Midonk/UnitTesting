@@ -7,8 +7,8 @@ using UnityEngine;
 /// Le satellite suivant est carrément retourné sur son axe vertical !
 /// il faut le faire rouler sur lui même.
 ///
-/// [outils]
-///     canon à photon
+/// [Level Design]
+///     source de photon
 ///     satellites
 ///     relais à photon
 ///
