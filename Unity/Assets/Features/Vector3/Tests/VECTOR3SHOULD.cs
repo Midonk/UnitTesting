@@ -124,35 +124,34 @@ public class VECTOR3SHOULD
         Assert.IsTrue(result == Vector3.Lerp(headPositionA, headPositionB, interpolant));
     }
     
-    // [Test]
-    // public void TheDualityConfusion()
-    // {
-    //     // Given
-    //     var testVector = new TestVector3Ex08();
-    //
-    //     // When
-    //     var playerPosition = new Vector3(1, 0, 1);
-    //     var vision1 = new Vector3(5, 1, 5);
-    //     var vision2 = new Vector3(10, 0, 10);
-    //
-    //     var result = testVector.TheDualityConfusion(playerPosition,vision1,vision2);
-    //
-    //     var distance1 = Vector3.Distance(playerPosition, vision1);
-    //     var distance2 = Vector3.Distance(playerPosition, vision2);
-    //
-    //     Vector3 closestVision;
-    //     
-    //     if (distance1 < distance2)
-    //     {
-    //         closestVision = vision1;
-    //     }
-    //     else
-    //     {
-    //         closestVision = vision2;
-    //     }
-    //
-    //
-    //     // Then
-    //     Assert.IsTrue(result == );
-    // }
+    [Test]
+    public void TheDualityConfusion()
+    {
+        // Given
+        var testVector = new TestVector3Ex08();
+    
+        // When
+        var playerPosition = new Vector3(1, 0, 1);
+        var vision1 = new Vector3(5, 1, 5);
+        var vision2 = new Vector3(10, 0, 10);
+    
+        var result = testVector.TheDualityConfusion(playerPosition,vision1,vision2);
+    
+        var distance1 = Vector3.Distance(playerPosition, vision1);
+        var distance2 = Vector3.Distance(playerPosition, vision2);
+    
+        Vector3 closestVision;
+        
+        if (distance1 < distance2)
+        {
+            closestVision = vision1;
+        }
+        else
+        {
+            closestVision = vision2;
+        }
+        
+        // Then
+        Assert.IsTrue(result == closestVision );
+    }
 }
