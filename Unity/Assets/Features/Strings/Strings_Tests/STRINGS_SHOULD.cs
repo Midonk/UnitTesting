@@ -59,4 +59,10 @@ public class STRINGS_SHOULD
         var answer6 = myTryOut.TryOut();
         Assert.IsTrue(answer6 == 't');
     }
+
+    [Test]
+    public void Exo07()
+    {
+        
+    }
 }
