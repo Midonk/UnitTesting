@@ -8,6 +8,9 @@ namespace Geometries.Runtime
         #region Public
         public float m_hitBoxHeight;
 
+        public static Vector2 m_myPosition = new Vector2(0.0f, 0.0f);
+        public static Vector2 m_otherPosition = new Vector2(1.0f, 0.0f);
+
         #endregion
 
 
@@ -22,7 +25,6 @@ namespace Geometries.Runtime
         #region Main
 
         /// La guerre des carrés a commencé.
-        /// Détecte la collision entre 2 carrés situés en (0; 0) et (1; 0)
         /// Une collision à lieu si leur 2 hitbox se superposent.
         /// On considère que leur position correspond au centre de la position. 
         public bool IsCollidingWith(Geometry_ex05 other)
