@@ -39,12 +39,26 @@ public class INTS_SHOULD
     public void TEST_EX03()
     {
         //given
-        var testInt02 = new Ints.Int_Ex03();
+        var testInt03 = new Ints.Int_Ex03();
 
         //when
-        var result = testInt02.ChangeMoney(3.45f);
+        var result = testInt03.ChangeMoney(3.45f);
 
         //then
         Assert.IsTrue(3 == result);
+    }
+
+    [Test]
+    public void TEST_EX04()
+    {
+        //given
+        var testInt04 = new Ints.Int_Ex04();
+        var Car = new string[] { "Blue", "Green", "Red", "Yellow", "Black" };
+
+        //when
+        var result = testInt04.Parking(Car);
+
+        //then
+        Assert.IsTrue(result == 2);
     }
 }
