@@ -9,6 +9,7 @@ using Ex02 = Arithmetics.Arithmetic_ex02;
 using Ex03 = Arithmetics.Arithmetic_ex03;
 using Ex04 = Arithmetics.Arithmetic_ex04;
 using Ex05 = Arithmetics.Arithmetic_ex05;
+using Ex06 = Arithmetics.Arithmetic_ex06;
 
 public class ARITHMETICS_SHOULD
 {
@@ -71,9 +72,22 @@ public class ARITHMETICS_SHOULD
         var myArithmetics = new Ex05(10.0f);
 
         // When
-        var result = myArithmetics.CalculateWaves(Mathf.Lerp(1.5f, 10f, Time.time));
+        var result = myArithmetics.CalculateWavesWidth(Mathf.Lerp(1.5f, 10f, Time.time));
 
         // Then
         Assert.IsTrue(result == Mathf.Lerp(1.5f, 10f, Time.time));
+    }
+
+    [Test]
+    public void SOLVE06()
+    {
+        // Given
+        var myArithmetics = new Ex06(4.8f);
+
+        // When
+        var result = myArithmetics.CalculateBeachLength(Mathf.Round(4.8f));
+
+        // Then
+        Assert.IsTrue(result == Mathf.Round(4.8f));
     }
 }
