@@ -194,5 +194,33 @@ public class TestBoolean
         var result = myBooleanTest.IsContainTheSentence(text, sentence);
         Assert.False(result);
     }
+    [Test]
+    public void StopTheCount()
+    {
+        bool[] boolList = { true, false, false, true, true };
 
+        var myBooleanTest = new Boolean_ex10();
+        var result = myBooleanTest.StopTheCount(boolList);
+        Assert.True(result);
+    }
+
+    [Test]
+    public void StopTheCount2()
+    {
+        bool[] boolList = { true, false, false, false, true };
+
+        var myBooleanTest = new Boolean_ex10();
+        var result = myBooleanTest.StopTheCount(boolList);
+        Assert.False(result);
+    }
+
+    [Test]
+    public void StopTheCount3()
+    {
+        bool[] boolList = { true, false, false, true };
+
+        var myBooleanTest = new Boolean_ex10();
+        var result = myBooleanTest.StopTheCount(boolList);
+        Assert.True(result);
+    }
 }
