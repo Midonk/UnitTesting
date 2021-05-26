@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class String_exo02 : MonoBehaviour
+public class String_ex03 : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
