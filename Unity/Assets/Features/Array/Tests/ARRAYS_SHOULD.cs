@@ -66,7 +66,7 @@ public class ARRAYS_SHOULD
     }
 
     [Test]
-    public void STOCK_METALS_IN_ARRAY()
+    public void HAVE_METAL_AT_INDEX_3_IN_ARRAY()
     {
         // Given        
         var production = new string[] { "metal", "junk", "metal", "rock", "rock", "metal", "metal", "metal" };
@@ -81,9 +81,9 @@ public class ARRAYS_SHOULD
     }
 
     [Test]
-    public void STOCK_ROCKS_IN_ARRAY()
+    public void HAVE_ROCK_AT_INDEX_1_IN_ARRAY()
     {
-        // Given        
+        // Given            
         var production = new string[] { "metal", "junk", "metal", "rock", "rock", "metal", "metal", "rock" };
         string[] carrierInventory;
         var ArrayEx03 = new Array_ex03(new string[3]);
@@ -108,5 +108,89 @@ public class ARRAYS_SHOULD
 
         // Then
         Assert.IsNull(carrierInventory[3]);
+    }
+
+    [Test]
+    public void RETURN_COORDINATE_2_NEGATIVE_1()
+    {
+        // Given        
+        var enemyCoordonates = new Vector2[] { new Vector2(2, -1),
+                                               new Vector2(3, 1),
+                                               new Vector2(-1, 5),
+                                               new Vector2(0, 6) };
+
+        var radarPosition = new Vector2(0, 0);
+        var ArrayEx04 = new Array_ex04();
+
+        // When
+        var result = ArrayEx04.GetClosestEnemyPosition(radarPosition, enemyCoordonates);
+
+        // Then
+        Assert.IsTrue(result == new Vector2(2, -1));
+    }
+
+    [Test]
+    public void RETURN_COORDINATE_10_5()
+    {
+        // Given        
+        var enemyCoordonates = new Vector2[] { new Vector2(0, -1),
+                                               new Vector2(1, 8),
+                                               new Vector2(10, 5),
+                                               new Vector2(2, -2) };
+
+        var radarPosition = new Vector2(9, 5);
+        var ArrayEx04 = new Array_ex04();
+
+        // When
+        var result = ArrayEx04.GetClosestEnemyPosition(radarPosition, enemyCoordonates);
+
+        // Then
+        Assert.IsTrue(result == new Vector2(10, 5));
+    }
+
+    [Test]
+    public void HAVE_METAL_AT_INDEX_1_2_IN_2D_ARRAY()
+    {
+        // Given        
+        var production = new string[] { "tools", "junk", "stone", "box", "weapon", "metal", "trash", "garbage" };
+        int capacity = 3;
+        var ArrayEx04 = new Array_ex10();
+
+        // When 
+        var carrierInventory = ArrayEx04.RessourcesToWarehouses(production, capacity);
+
+        // Then
+        Assert.IsTrue(carrierInventory[1,2] == "metal");
+    }
+
+    [Test]
+    public void HAVE_JUNK_AT_INDEX_1_0_IN_2D_ARRAY()
+    {
+        // Given        
+        var production = new string[] { "stone", "weapon", "trash", "rock", "junk", "metal"};
+        int capacity = 4;
+        var ArrayEx04 = new Array_ex10();
+
+        // When 
+        var carrierInventory = ArrayEx04.RessourcesToWarehouses(production, capacity);
+
+        // Then
+        Assert.IsTrue(carrierInventory[1, 0] == "junk");
+    }
+
+    [Test]
+    public void HAVE_NULL_AT_INDEX_1_3_IN_2D_ARRAY()
+    {
+        // Given        
+        var production = new string[] { "trash", "junk", "tools", "rock", "junk", "metal" };
+        
+        int capacity = 5;
+        var ArrayEx04 = new Array_ex10();
+
+        // When 
+        var carrierInventory = ArrayEx04.RessourcesToWarehouses(production, capacity);
+
+        // Then
+        Assert.IsNull(carrierInventory[1, 3]);
     }
 }
