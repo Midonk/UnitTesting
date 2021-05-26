@@ -149,6 +149,38 @@ public class ARRAYS_SHOULD
     }
 
     [Test]
+    public void RETURN_TRUE()
+    {
+        // Given        
+        var activatedReactors = new bool[] { true, false, true, true, true, true, false };
+
+        int minimumLoad = 4;
+        var ArrayEx05 = new Array_ex05();
+
+        // When
+        var result = ArrayEx05.OrbitalCanonCanShoot(activatedReactors, minimumLoad);
+
+        // Then
+        Assert.IsTrue(result);
+    }
+
+    [Test]
+    public void RETURN_FALSE()
+    {
+        // Given        
+        var activatedReactors = new bool[] { true, true, false, true, true};
+
+        int minimumLoad = 3;
+        var ArrayEx05 = new Array_ex05();
+
+        // When
+        var result = ArrayEx05.OrbitalCanonCanShoot(activatedReactors, minimumLoad);
+
+        // Then
+        Assert.IsFalse(result);
+    }
+
+    [Test]
     public void HAVE_METAL_AT_INDEX_1_2_IN_2D_ARRAY()
     {
         // Given        
