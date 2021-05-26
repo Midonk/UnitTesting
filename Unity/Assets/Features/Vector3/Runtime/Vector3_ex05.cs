@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Vector3Tests
 {
-    public class Vector3_ex05 : MonoBehaviour
+    public class Vector3_ex05
     {
         #region Main
 

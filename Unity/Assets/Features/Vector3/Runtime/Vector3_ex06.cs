@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Vector3Tests
 {
-    public class Vector3_ex06 : MonoBehaviour
+    public class Vector3_ex06
     {
         /// <summary>
         /// Je suis pres du miroir mais avec tout ce que j'ai bu, ma tete tourne,

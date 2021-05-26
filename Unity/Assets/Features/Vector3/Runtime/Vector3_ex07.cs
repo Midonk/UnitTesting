@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Vector3Tests
 {
-    public class Vector3_ex07 : MonoBehaviour
+    public class Vector3_ex07
     {
         /// <summary>
         /// Bon sang, ce foutu miroir me renvoi un reflet distordu.
