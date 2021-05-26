@@ -222,6 +222,17 @@ public class LIST_SHOULD
         Assert.IsTrue(result.SequenceEqual(classroom));
     }
 
-    
+    [Test]
+    public void _ExList10()
+    {
+        //Given
+
+        //When
+        var result = listClass.CheckTheDuplicate(classroom);
+
+        //Then
+        Assert.IsTrue(result.Key.FirstName.Equals(classroom.Find(x => x.FirstName == "Cherif").FirstName) && result.Value == 2);
+        
+    }
 
 }
