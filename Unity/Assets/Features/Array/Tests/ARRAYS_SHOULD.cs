@@ -8,7 +8,7 @@ using Arrays;
 public class ARRAYS_SHOULD
 {
     [Test]
-    public void RETURN_15_FROM_INT_ARRAY()
+    public void EX01_RETURN_15_FROM_INT_ARRAY()
     {
         // Given
         var interestPoints = new int[] { -5, 2, 10, 8, 15, -12 };
@@ -22,7 +22,7 @@ public class ARRAYS_SHOULD
     }
 
     [Test]
-    public void RETURN_NEGATIVE_5_FROM_NEGATIVE_INT_ARRAY()
+    public void EX01_RETURN_NEGATIVE_5_FROM_NEGATIVE_INT_ARRAY()
     {
         // Given
         var interestPoints = new int[] { -5, -50, -10, -20, -12, -25 };
@@ -36,7 +36,7 @@ public class ARRAYS_SHOULD
     }
 
     [Test]
-    public void REPLACE_NULL_IN_ARRAY()
+    public void EX02_REPLACE_NULL_IN_ARRAY()
     {
         // Given
         var techParts = new string[] { null, "gear", "stuff", null, "cable", null };
@@ -51,7 +51,7 @@ public class ARRAYS_SHOULD
     }
         
     [Test]
-    public void NOT_REPLACE_NOT_NULL_ITEM_IN_ARRAY()
+    public void EX02_NOT_REPLACE_NOT_NULL_ITEM_IN_ARRAY()
     {
         // Given        
         var techParts = new string[] { null, "circuits", "button", null, "metal", null };
@@ -66,7 +66,7 @@ public class ARRAYS_SHOULD
     }
 
     [Test]
-    public void HAVE_METAL_AT_INDEX_3_IN_ARRAY()
+    public void EX03_HAVE_METAL_AT_INDEX_3_IN_ARRAY()
     {
         // Given        
         var production = new string[] { "metal", "junk", "metal", "rock", "rock", "metal", "metal", "metal" };
@@ -81,7 +81,7 @@ public class ARRAYS_SHOULD
     }
 
     [Test]
-    public void HAVE_ROCK_AT_INDEX_1_IN_ARRAY()
+    public void EX03_HAVE_ROCK_AT_INDEX_1_IN_ARRAY()
     {
         // Given            
         var production = new string[] { "metal", "junk", "metal", "rock", "rock", "metal", "metal", "rock" };
@@ -96,7 +96,7 @@ public class ARRAYS_SHOULD
     }
 
     [Test]
-    public void HAVE_NULL_AT_LAST_INDEX()
+    public void EX03_HAVE_NULL_AT_LAST_INDEX()
     {
         // Given        
         var production = new string[] { "metal", "junk", "metal", "rock", "rock", "metal", "metal", "rock" };
@@ -111,7 +111,7 @@ public class ARRAYS_SHOULD
     }
 
     [Test]
-    public void RETURN_COORDINATE_2_NEGATIVE_1()
+    public void EX04_RETURN_COORDINATE_2_NEGATIVE_1()
     {
         // Given        
         var enemyCoordonates = new Vector2[] { new Vector2(2, -1),
@@ -130,7 +130,7 @@ public class ARRAYS_SHOULD
     }
 
     [Test]
-    public void RETURN_COORDINATE_10_5()
+    public void EX04_RETURN_COORDINATE_10_5()
     {
         // Given        
         var enemyCoordonates = new Vector2[] { new Vector2(0, -1),
@@ -149,7 +149,7 @@ public class ARRAYS_SHOULD
     }
 
     [Test]
-    public void RETURN_TRUE()
+    public void EX05_RETURN_TRUE()
     {
         // Given        
         var activeReactors = new bool[] { true, false, true, true, true, true, false };
@@ -165,7 +165,7 @@ public class ARRAYS_SHOULD
     }
 
     [Test]
-    public void RETURN_FALSE()
+    public void EX05_RETURN_FALSE()
     {
         // Given        
         var activeReactors = new bool[] { true, true, false, true, true};
@@ -181,21 +181,35 @@ public class ARRAYS_SHOULD
     }
 
     [Test]
-    public void RETURN_INVERSE_ARRAY()
-    {
+    public void EX06_RETURN_4_FROM_REVERSE_ARRAY()
+    {   
         // Given        
-        var code = new int[] { 1, 2, 3, 4, 5 };
+        var array = new int[] { 1, 2, 3, 4, 5 };
         var ArrayEx06 = new Array_ex06();
 
         // When
-        var result = ArrayEx06.RevertCode(code);
+        var result = ArrayEx06.RevertCode(array);
 
         // Then
         Assert.IsTrue(result[1] == 4);
     }
 
     [Test]
-    public void HAVE_METAL_AT_INDEX_1_2_IN_2D_ARRAY()
+    public void EX06_RETURN_NEGATIVE_3_FROM_REVERSE_ARRAY()
+    {
+        // Given        
+        var array = new int[] { 0, 1, 0, -3 };
+        var ArrayEx06 = new Array_ex06();   
+            
+        // When
+        var result = ArrayEx06.RevertCode(array);
+
+        // Then
+        Assert.IsTrue(result[0] == -3);
+    }
+
+    [Test]
+    public void EX10_HAVE_METAL_AT_INDEX_1_2_IN_2D_ARRAY()
     {
         // Given        
         var production = new string[] { "tools", "junk", "stone", "box", "weapon", "metal", "trash", "garbage" };
@@ -210,7 +224,7 @@ public class ARRAYS_SHOULD
     }
 
     [Test]
-    public void HAVE_JUNK_AT_INDEX_1_0_IN_2D_ARRAY()
+    public void EX10_HAVE_JUNK_AT_INDEX_1_0_IN_2D_ARRAY()
     {
         // Given        
         var production = new string[] { "stone", "weapon", "trash", "rock", "junk", "metal"};
@@ -225,7 +239,7 @@ public class ARRAYS_SHOULD
     }
 
     [Test]
-    public void HAVE_NULL_AT_INDEX_1_3_IN_2D_ARRAY()
+    public void EX10_HAVE_NULL_AT_INDEX_1_3_IN_2D_ARRAY()
     {
         // Given        
         var production = new string[] { "trash", "junk", "tools", "rock", "junk", "metal" };

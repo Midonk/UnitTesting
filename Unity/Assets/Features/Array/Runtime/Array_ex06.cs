@@ -8,25 +8,22 @@ namespace Arrays
 	{
 		#region Main
 
-		/// 
-		public int[] RevertCode(int[] code)
+		/// Inverser les index du tableau
+		/// (Oui j'avais pas d'idée)
+		public int[] RevertCode(int[] array)
 		{
-			int[] revertCode = new int[code.Length];
+			int[] revertArray = new int[array.Length];
+			int index = 0;
 
-			for (int i = code.Length - 1; i >= 0; i--)
+			for (int i = array.Length - 1; i >= 0; i--)
             {
-				revertCode[i] = code[i];
-				
+				revertArray[index] = array[i];
+				index++;
 			}
 
-			for (int i = 0; i < revertCode.Length; i++)
-            {
-				Debug.Log(code[i]);
-			}
-
-			return revertCode;
+			return revertArray;
 		}
-			
+		
 		#endregion
 	}
 }
