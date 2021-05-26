@@ -11,6 +11,7 @@ using TestVector3Ex03 = Vector3Tests.Vector3_ex03;
 using TestVector3Ex04 = Vector3Tests.Vector3_ex04;
 using TestVector3Ex05 = Vector3Tests.Vector3_ex05;
 using TestVector3Ex06 = Vector3Tests.Vector3_ex06;
+using TestVector3Ex07 = Vector3Tests.Vector3_ex07;
 
 
 public class VECTOR3SHOULD
@@ -103,5 +104,21 @@ public class VECTOR3SHOULD
 
         // Then
         Assert.IsTrue(result == (mirrorPosition - myPosition) );
+    } 
+    [Test]
+    public void DrunkRotationNightmare()
+    {
+        // Given
+        var testVector = new TestVector3Ex07();
+
+        // When
+        var headPositionA = new Vector3(1, 0, 2);
+        var headPositionB = new Vector3(3, 0, 2);
+        var interpolant = 1.0f;
+        
+        var result = testVector.Check07(headPositionA,headPositionB);
+
+        // Then
+        Assert.IsTrue(result == Vector3.Lerp(headPositionA,headPositionB,interpolant) );
     }
 }
