@@ -14,7 +14,7 @@ namespace String_exo02
         public string TryOut()
         {
             var shots = "votre réponse";
-            return shots + shots + shots + shots + shots + shots;
+            return "votre réponse";
         }
 
         #endregion
