@@ -94,4 +94,31 @@ public class TestBoolean
 
         Assert.IsTrue(result);
     }
+
+    [Test]
+    public void AvoidingEmpty()
+    {
+
+        string[] stringArray = {
+            "Ce tableau", "" , "du vide"
+        };
+        var myBooleanTest = new Boolean_ex05();
+
+        var result = myBooleanTest.AvoidingEmpty(stringArray);
+
+        Assert.IsFalse(result);
+    }
+    [Test]
+    public void AvoidingEmpty2()
+    {
+
+        string[] stringArray = {
+            "Ce tableau", "posséde pas" , "du vide"
+        };
+        var myBooleanTest = new Boolean_ex05();
+
+        var result = myBooleanTest.AvoidingEmpty(stringArray);
+
+        Assert.IsTrue(result);
+    }
 }
