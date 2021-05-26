@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
+
+// Alias
 using TestVector3Ex01 = Vector3Tests.Vector3_ex01;
 using TestVector3Ex02 = Vector3Tests.Vector3_ex02;
 using TestVector3Ex03 = Vector3Tests.Vector3_ex03;
 using TestVector3Ex04 = Vector3Tests.Vector3_ex04;
 using TestVector3Ex05 = Vector3Tests.Vector3_ex05;
+using TestVector3Ex06 = Vector3Tests.Vector3_ex06;
 
 
 public class VECTOR3SHOULD
@@ -84,5 +87,21 @@ public class VECTOR3SHOULD
 
         // Then
         Assert.IsTrue(result == position + velocity);
+    }
+
+    [Test]
+    public void KeepYourHeadStraight()
+    {
+        // Given
+        var testVector = new TestVector3Ex06();
+
+        // When
+        var myPosition = new Vector3(1, 1, 1);
+        var mirrorPosition = new Vector3(2, 1, 4);
+        
+        var result = testVector.Check06(myPosition,mirrorPosition);
+
+        // Then
+        Assert.IsTrue(result == (mirrorPosition - myPosition) );
     }
 }
