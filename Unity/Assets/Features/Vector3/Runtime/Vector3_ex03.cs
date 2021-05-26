@@ -14,7 +14,7 @@ namespace Vector3Tests
         /// Au cas ou je doive rebrousser chemin, ne sais-t-on jamais.
         /// </summary>
         
-        public float Check03(Vector3 position_a, Vector3 position_b)
+        public float WorthlessDistance(Vector3 position_a, Vector3 position_b)
         {
 
             return 0f;

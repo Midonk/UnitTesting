@@ -14,7 +14,7 @@ namespace Vector3Tests
         /// Si je me rappelle mes formules magiques, je pourrais transformer cette position en direction, ne me manque qu'un element.
         /// Il me semble que c'est une question de longueur.
         /// </summary>
-        public Vector3 Check02(Vector3 position)
+        public Vector3 ThisIsNormal(Vector3 position)
         {
             return position;
         }

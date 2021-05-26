@@ -26,7 +26,7 @@ public class VECTOR3SHOULD
         var testVector = new TestVector3Ex01();
 
         // When
-        var result = testVector.Check01(new Vector3(0, 0, 0));
+        var result = testVector.WhereAmI(new Vector3(0, 0, 0));
 
         // Then
         Assert.IsTrue(result == new Vector3(5, 0, 5));
@@ -39,7 +39,7 @@ public class VECTOR3SHOULD
         var testVector = new TestVector3Ex02();
 
         // When
-        var result = testVector.Check02(new Vector3(5, 5, 5));
+        var result = testVector.ThisIsNormal(new Vector3(5, 5, 5));
 
         // Then
         Assert.IsTrue(result == result.normalized);
@@ -55,7 +55,7 @@ public class VECTOR3SHOULD
         var vect1 = new Vector3(2, 2, 2);
         var vect2 = new Vector3(5, 5, 5);
 
-        var result = testVector.Check03(vect1, vect2);
+        var result = testVector.WorthlessDistance(vect1, vect2);
 
         // Then
         Assert.IsTrue(result == Vector3.Distance(vect1, vect2));
@@ -71,7 +71,7 @@ public class VECTOR3SHOULD
         var direction = new Vector3(3, 2, 1);
         var speed = 2.5f;
 
-        var result = testVector.Check04(direction, speed);
+        var result = testVector.InVelocityITrust(direction, speed);
 
         // Then
         Assert.IsTrue(result == direction * speed);
@@ -87,7 +87,7 @@ public class VECTOR3SHOULD
         var position = new Vector3(5, 0, 5);
         var velocity = new Vector3(3, 2, 1) * 2.5f;
 
-        var result = testVector.Check05(position, velocity);
+        var result = testVector.WalkLikeANinja(position, velocity);
 
         // Then
         Assert.IsTrue(result == position + velocity);
@@ -103,14 +103,14 @@ public class VECTOR3SHOULD
         var myPosition = new Vector3(1, 1, 1);
         var mirrorPosition = new Vector3(2, 1, 4);
 
-        var result = testVector.Check06(myPosition, mirrorPosition);
+        var result = testVector.KeepYourHeadStraight(myPosition, mirrorPosition);
 
         // Then
         Assert.IsTrue(result == (mirrorPosition - myPosition));
     }
 
     [Test]
-    public void DrunkInterpolationNightmare()
+    public void DrunkenInterpolationNightmare()
     {
         // Given
         var testVector = new TestVector3Ex07();
@@ -120,7 +120,7 @@ public class VECTOR3SHOULD
         var headPositionB = new Vector3(3, 0, 2);
         var interpolant = 1.0f;
 
-        var result = testVector.Check07(headPositionA, headPositionB);
+        var result = testVector.DrunkenInterpolationNightmare(headPositionA, headPositionB);
 
         // Then
         Assert.IsTrue(result == Vector3.Lerp(headPositionA, headPositionB, interpolant));

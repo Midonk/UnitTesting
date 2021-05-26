@@ -13,7 +13,7 @@ namespace Vector3Tests
         /// ne me reste plus qu'a me faufiller [avancer] dans cette direction tel un ninja !
         /// Bientot, je pourrais voir mon reflet dans ce miroir !
         /// </summary>
-        public Vector3 Check05(Vector3 position, Vector3 velocity)
+        public Vector3 WalkLikeANinja(Vector3 position, Vector3 velocity)
         {
             return new Vector3(1, 1, 1);
         }

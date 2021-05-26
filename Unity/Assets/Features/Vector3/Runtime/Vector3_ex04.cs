@@ -15,7 +15,7 @@ namespace Vector3Tests
         ///  Il vaut mieux que je prevoie la Velocite a laquelle je souhaite me deplacer, il y a de droles d'individus dans le coin.
         /// </summary>
     
-        public Vector3 Check04(Vector3 direction, float speed)
+        public Vector3 InVelocityITrust(Vector3 direction, float speed)
         {
             return new Vector3(3, 2, 1);
         }

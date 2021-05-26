@@ -14,7 +14,7 @@ namespace Vector3Tests
         /// En fouillant mes poches, je me rend compte qu'il y a un message sur un bout de papier.
         /// Celui-ci est intitule : "value" et il y a ecrit : "Retournes une nouvelle position qui aura en  en x : 5, en y : 0, en z : 5"
         /// Le message est signe "X"
-        public Vector3 Check01(Vector3 value)
+        public Vector3 WhereAmI(Vector3 value)
         {
             
             return value;
