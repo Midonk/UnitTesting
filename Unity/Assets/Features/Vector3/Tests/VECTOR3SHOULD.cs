@@ -26,7 +26,7 @@ public class VECTOR3SHOULD
     }
 
     [Test]
-    public void Vector3IsNormal()
+    public void ThisIsNormal()
     {
         // Given
         var testVector = new TestVector3Ex02();
