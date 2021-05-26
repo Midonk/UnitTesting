@@ -175,11 +175,24 @@ public class TestBoolean
         Assert.IsFalse(result);
     }
 
-    /*     [Test]
-        public void IsContainThePattern(){
-            string text 
-            var myBooleanTest = new Boolean_ex09();
-            var result = myBooleanTest.IsContainThePattern()
-        }  */
+    [Test]
+    public void IsContainThePattern()
+    {
+        string text = " Ceci est un texte random eco+ ";
+        string sentence = "eco+";
+        var myBooleanTest = new Boolean_ex09();
+        var result = myBooleanTest.IsContainTheSentence(text, sentence);
+        Assert.True(result);
+    }
+
+    [Test]
+    public void IsContainThePattern2()
+    {
+        string text = " Ceci est un texte random eco + ";
+        string sentence = "nope ";
+        var myBooleanTest = new Boolean_ex09();
+        var result = myBooleanTest.IsContainTheSentence(text, sentence);
+        Assert.False(result);
+    }
 
 }
