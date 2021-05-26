@@ -13,7 +13,7 @@ namespace String_exo08
 
         public string TryOut()
         {
-            var cris1 = "JE SUIS LE MEUTIER";
+            var cris1 = "JE SUIS LE CHARPENTIER";
             var cris2 = "JE SUIS LE VENDEUR";
             var cris3 = "JE SUIS LE BOULANGER";
             var cris4 = "JE SUIS LE FERMIER";

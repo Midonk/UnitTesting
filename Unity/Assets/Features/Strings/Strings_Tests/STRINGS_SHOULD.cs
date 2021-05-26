@@ -85,7 +85,7 @@ public class STRINGS_SHOULD
     {
         var myTryOut = new String_e09();
         var answer9 = myTryOut.TryOut();
-        Assert.IsTrue(answer9 == "");
+        Assert.IsTrue(answer9 == "acteur pornographique");
     }
 
     [Test]
