@@ -188,7 +188,7 @@ public class ARRAYS_SHOULD
         var ArrayEx06 = new Array_ex06();
 
         // When
-        var result = ArrayEx06.RevertCode(array);
+        var result = ArrayEx06.RevertArray(array);
 
         // Then
         Assert.IsTrue(result[1] == 4);
@@ -202,10 +202,40 @@ public class ARRAYS_SHOULD
         var ArrayEx06 = new Array_ex06();   
             
         // When
-        var result = ArrayEx06.RevertCode(array);
+        var result = ArrayEx06.RevertArray(array);
 
         // Then
         Assert.IsTrue(result[0] == -3);
+    }
+
+    [Test]
+    public void EX07_RETURN_5_FROM_ARRAY()
+    {
+        // Given        
+        var depositsValueAndDepth = new int[,] { { 2 , 15 }, { 15, 8 }, { 5, 11 }, { 5, 8 }, { 5, 5 } };
+        var depthOfMonster = 10;
+        var ArrayEx07 = new Array_ex07();
+
+        // When
+        var result = ArrayEx07.GetDepositsValues(depositsValueAndDepth, depthOfMonster);
+
+        // Then
+        Assert.IsTrue(result[3] == 5);
+    }
+
+    [Test]
+    public void EX07_RETURN_0_FROM_ARRAY()
+    {
+        // Given        
+        var depositsValueAndDepth = new int[,] { { 0, 2 }, { 15, 4 }, { 5, 8 }, { 5, 2 }, { 5, 1 } };
+        var depthOfMonster = 5;
+        var ArrayEx07 = new Array_ex07();
+
+        // When
+        var result = ArrayEx07.GetDepositsValues(depositsValueAndDepth, depthOfMonster);
+
+        // Then
+        Assert.IsTrue(result[2] == 0);
     }
 
     [Test]
@@ -252,5 +282,21 @@ public class ARRAYS_SHOULD
 
         // Then
         Assert.IsNull(carrierInventory[1, 3]);
+    }
+
+    [Test]
+    public void EX10_HAVE_LENGTH_4_ON_FIRST_DIMENSION()
+    {
+        // Given        
+        var production = new string[] { "trash", "junk", "tools", "rock", "junk", "metal", "weapon" };
+
+        int capacity = 2;
+        var ArrayEx10 = new Array_ex10();
+        
+        // When 
+        var carrierInventory = ArrayEx10.RessourcesToWarehouses(production, capacity);
+
+        // Then
+        Assert.IsTrue(carrierInventory.GetLength(0) == 4);
     }
 }
