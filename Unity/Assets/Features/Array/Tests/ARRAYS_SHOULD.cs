@@ -53,7 +53,7 @@ public class ARRAYS_SHOULD
     [Test]
     public void EX02_NOT_REPLACE_NOT_NULL_ITEM_IN_ARRAY()
     {
-        // Given        
+        // Given
         var techParts = new string[] { null, "circuits", "button", null, "metal", null };
         var ArrayEx02 = new Array_ex02();
         string newPart = "new part";
@@ -68,7 +68,7 @@ public class ARRAYS_SHOULD
     [Test]
     public void EX03_HAVE_METAL_AT_INDEX_3_IN_ARRAY()
     {
-        // Given        
+        // Given
         var production = new string[] { "metal", "junk", "metal", "rock", "rock", "metal", "metal", "metal" };
         string[] carrierInventory;
         var ArrayEx03 = new Array_ex03(new string[4]);
@@ -83,7 +83,7 @@ public class ARRAYS_SHOULD
     [Test]
     public void EX03_HAVE_ROCK_AT_INDEX_1_IN_ARRAY()
     {
-        // Given            
+        // Given
         var production = new string[] { "metal", "junk", "metal", "rock", "rock", "metal", "metal", "rock" };
         string[] carrierInventory;
         var ArrayEx03 = new Array_ex03(new string[3]);
@@ -98,7 +98,7 @@ public class ARRAYS_SHOULD
     [Test]
     public void EX03_HAVE_NULL_AT_LAST_INDEX()
     {
-        // Given        
+        // Given
         var production = new string[] { "metal", "junk", "metal", "rock", "rock", "metal", "metal", "rock" };
         string[] carrierInventory;
         var ArrayEx03 = new Array_ex03(new string[4]);
@@ -113,7 +113,7 @@ public class ARRAYS_SHOULD
     [Test]
     public void EX04_RETURN_COORDINATE_2_NEGATIVE_1()
     {
-        // Given        
+        // Given
         var enemyCoordonates = new Vector2[] { new Vector2(2, -1),
                                                new Vector2(3, 1),
                                                new Vector2(-1, 5),
@@ -132,7 +132,7 @@ public class ARRAYS_SHOULD
     [Test]
     public void EX04_RETURN_COORDINATE_10_5()
     {
-        // Given        
+        // Given
         var enemyCoordonates = new Vector2[] { new Vector2(0, -1),
                                                new Vector2(1, 8),
                                                new Vector2(10, 5),
@@ -151,7 +151,7 @@ public class ARRAYS_SHOULD
     [Test]
     public void EX05_RETURN_TRUE()
     {
-        // Given        
+        // Given
         var activeReactors = new bool[] { true, false, true, true, true, true, false };
 
         int minimumLoad = 4;
@@ -167,7 +167,7 @@ public class ARRAYS_SHOULD
     [Test]
     public void EX05_RETURN_FALSE()
     {
-        // Given        
+        // Given
         var activeReactors = new bool[] { true, true, false, true, true};
 
         int minimumLoad = 3;
@@ -183,7 +183,7 @@ public class ARRAYS_SHOULD
     [Test]
     public void EX06_RETURN_4_FROM_REVERSE_ARRAY()
     {   
-        // Given        
+        // Given
         var array = new int[] { 1, 2, 3, 4, 5 };
         var ArrayEx06 = new Array_ex06();
 
@@ -197,7 +197,7 @@ public class ARRAYS_SHOULD
     [Test]
     public void EX06_RETURN_NEGATIVE_3_FROM_REVERSE_ARRAY()
     {
-        // Given        
+        // Given
         var array = new int[] { 0, 1, 0, -3 };
         var ArrayEx06 = new Array_ex06();   
             
@@ -211,7 +211,7 @@ public class ARRAYS_SHOULD
     [Test]
     public void EX07_RETURN_5_FROM_ARRAY()
     {
-        // Given        
+        // Given
         var depositsValueAndDepth = new int[,] { { 2 , 15 }, { 15, 8 }, { 5, 11 }, { 5, 8 }, { 5, 5 } };
         var depthOfMonster = 10;
         var ArrayEx07 = new Array_ex07();
@@ -226,7 +226,7 @@ public class ARRAYS_SHOULD
     [Test]
     public void EX07_RETURN_0_FROM_ARRAY()
     {
-        // Given        
+        // Given
         var depositsValueAndDepth = new int[,] { { 0, 2 }, { 15, 4 }, { 5, 8 }, { 5, 2 }, { 5, 1 } };
         var depthOfMonster = 5;
         var ArrayEx07 = new Array_ex07();
@@ -236,6 +236,46 @@ public class ARRAYS_SHOULD
 
         // Then
         Assert.IsTrue(result[2] == 0);
+    }
+
+    [Test]
+    public void EX08_RETURN_37_FROM_ARRAY()
+    {
+        // Given
+        var ArrayEx08 = new Array_ex08();
+        var GUN = SoldierType.GUNNER;
+        var HEAVY = SoldierType.HEAVYGUNNER;
+        var ROCKET = SoldierType.ROCKETLAUNCHER;
+
+        var squads = new SoldierType[,] { { GUN, GUN, GUN, HEAVY, GUN },
+                                          { HEAVY, HEAVY, GUN, GUN, HEAVY},
+                                          { GUN, ROCKET, HEAVY, GUN, GUN } };
+
+        // When
+        var result = ArrayEx08.GetSquadsPower(squads);
+
+        // Then
+        Assert.IsTrue(result[2] == 37);
+    }
+
+    [Test]
+    public void EX08_RETURN_2306_FROM_ARRAY()
+    {
+        // Given
+        var ArrayEx08 = new Array_ex08(101, 251, 1052);
+        var GUN = SoldierType.GUNNER;
+        var HEAVY = SoldierType.HEAVYGUNNER;
+        var ROCKET = SoldierType.ROCKETLAUNCHER;
+
+        var squads = new SoldierType[,] { { GUN, GUN, GUN, HEAVY}, // 554
+                                          { GUN, ROCKET, ROCKET, GUN }, // 2306
+                                          { HEAVY, HEAVY, GUN, GUN} }; // 704
+
+        // When
+        var result = ArrayEx08.GetSquadsPower(squads);
+
+        // Then
+        Assert.IsTrue(result[1] == 2306);
     }
 
     [Test]
@@ -300,3 +340,10 @@ public class ARRAYS_SHOULD
         Assert.IsTrue(carrierInventory.GetLength(0) == 4);
     }
 }
+
+//public enum SoldierType
+//{
+//    GUNNER = 5,
+//    HEAVYGUNNER = 10,
+//    ROCKETLAUNCHER = 16
+//}
