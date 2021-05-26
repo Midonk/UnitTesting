@@ -9,6 +9,7 @@ using String_e02 = String_exo02.String_exo02;
 using String_e03 = String_exo03.String_exo03;
 using String_e04 = String_exo04.String_exo04;
 using String_e05 = String_exo05.String_exo05;
+using String_e06 = String_exo06.String_exo06;
 public class STRINGS_SHOULD
 {
     [Test]
@@ -49,5 +50,13 @@ public class STRINGS_SHOULD
         var myTryOut = new String_e05();
         var answer5 = myTryOut.TryOut();
         Assert.IsTrue(answer5 == 898);
+    }
+
+    [Test]
+    public void Exo06()
+    {
+        var myTryOut = new String_e06();
+        var answer6 = myTryOut.TryOut();
+        Assert.IsTrue(answer6 == 't');
     }
 }
