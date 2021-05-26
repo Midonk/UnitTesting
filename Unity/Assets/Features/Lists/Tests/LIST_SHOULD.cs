@@ -25,6 +25,14 @@ public class LIST_SHOULD
         classroom.Add(new Person("Maxime", "Bellens", "Unknown"));
         classroom.Add(new Person("Robin", "Roekens", "Unknown"));
         classroom.Add(new Person("Hervé", "Chiera", "Unknown"));
+        classroom.Add(new Person("Lory", "Colonius", "Unknown"));
+        classroom.Add(new Person("Mathieu", "Allard", "Unknown"));
+        classroom.Add(new Person("Thomas", "Finet", "Unknown"));
+        classroom.Add(new Person("Adrien", "Ideler", "Unknown"));
+        classroom.Add(new Person("Kyllian", "Bocklandt", "Unknown"));
+        classroom.Add(new Person("Jean", "Mourmeaux", "Unknown"));
+        classroom.Add(new Person("Amaury", "Deltenre", "Unknown"));
+        classroom.Add(new Person("Cherif", "Younis", "Unknown"));
 
         listModules = new List<Module>();
         listModules.Add(new Module("Unity 3D", 51));
@@ -190,10 +198,7 @@ public class LIST_SHOULD
 
         var answer = listProduct1.Union(listProduct2).Union(listProduct3).ToList();
 
-        foreach (Product item in answer)
-        {
-            Debug.Log(item.Name + "-" + item.Category);
-        }
+        
 
         //Then
 
@@ -204,15 +209,19 @@ public class LIST_SHOULD
     [Test]
     public void _ExList09()
     {
+        //Given
+        var data = classroom.ToList();
+        var result = listClass.SortTheClassRoomList(data);
 
+        //When
+        classroom.Sort(delegate (Person x, Person y) {
+            return x.FirstName.CompareTo(y.FirstName);
+        });
 
+        //Then
+        Assert.IsTrue(result.SequenceEqual(classroom));
     }
 
-    [Test]
-    public void _ExList10()
-    {
-
-
-    }
+    
 
 }

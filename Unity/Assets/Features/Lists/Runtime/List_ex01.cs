@@ -178,6 +178,19 @@ namespace ListSystem
 
 
 
+        
+        /// Pour en revenir à la liste de la formation, j'aurais besoin qu'elle soit triée, mais par rapport au prénom de la personne.
+        
+        public List<Person> SortTheClassRoomList(List<Person> list)
+        {
+
+            return list;
+        }
+
+
+       
+
+
 
 
 
