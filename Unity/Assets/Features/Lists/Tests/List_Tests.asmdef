@@ -1,10 +1,10 @@
 {
-    "name": "Geometry_Tests",
+    "name": "List_Tests",
     "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "Geometry"
+        "ListSystem"
     ],
     "includePlatforms": [
         "Editor"
