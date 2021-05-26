@@ -4,7 +4,7 @@ using UnityEngine;
 
 /// <summary>
 /// [Infos]
-/// bonjour
+/// texte de mise en scene
 ///
 /// [level Design]
 /// mise en scene
@@ -12,12 +12,12 @@ using UnityEngine;
 /// crane
 ///
 /// [énigme]
-/// il est écrit tournez de 30° le crane sur son axe vertical
+/// vous devez faire la rotation inverse de 30°
 /// </summary>
 
 namespace TestSystem
 {
-    public class Quaternion_ex01
+    public class Quaternion_ex02
     {
         #region Exposed
 
@@ -27,7 +27,7 @@ namespace TestSystem
 
         #region Constructor
 
-        public Quaternion_ex01(Quaternion _rotation)
+        public Quaternion_ex02(Quaternion _rotation)
         {
             m_rotation = _rotation;
         }
@@ -36,10 +36,10 @@ namespace TestSystem
 
         #region Main
 
-        public Quaternion ApplyRotationOnY(Quaternion value)
+        public Quaternion ApplyInverseRotationOf30(Quaternion value)
         {
             //réponse attendue :
-            //return Quaternion.Euler(0, 30, 0);
+            // return Quaternion.Inverse(Quaternion.Euler(0, 30, 0));
             return value;
         }
 

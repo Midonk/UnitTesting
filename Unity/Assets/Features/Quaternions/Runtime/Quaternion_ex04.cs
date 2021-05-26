@@ -4,7 +4,7 @@ using UnityEngine;
 
 /// <summary>
 /// [Infos]
-/// bonjour
+/// texte de mise en scene
 ///
 /// [level Design]
 /// mise en scene
@@ -12,12 +12,12 @@ using UnityEngine;
 /// crane
 ///
 /// [énigme]
-/// il est écrit tournez de 30° le crane sur son axe vertical
+/// vous voyez un crane qui regarde à gauche et décidez de le tourner vers la droite
 /// </summary>
 
 namespace TestSystem
 {
-    public class Quaternion_ex01
+    public class Quaternion_ex04
     {
         #region Exposed
 
@@ -27,7 +27,7 @@ namespace TestSystem
 
         #region Constructor
 
-        public Quaternion_ex01(Quaternion _rotation)
+        public Quaternion_ex04(Quaternion _rotation)
         {
             m_rotation = _rotation;
         }
@@ -36,10 +36,10 @@ namespace TestSystem
 
         #region Main
 
-        public Quaternion ApplyRotationOnY(Quaternion value)
+        public Quaternion TurnTheCrane(Quaternion value)
         {
             //réponse attendue :
-            //return Quaternion.Euler(0, 30, 0);
+            //return Quaternion.FromToRotation(Vector3.left, Vector3.right);
             return value;
         }
 
