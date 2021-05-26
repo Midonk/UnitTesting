@@ -39,7 +39,7 @@ public class VECTOR3SHOULD
     }
 
     [Test]
-    public void Vector3Distance()
+    public void WorthlessDistance()
     {
         // Given
         var testVector = new TestVector3Ex03();
