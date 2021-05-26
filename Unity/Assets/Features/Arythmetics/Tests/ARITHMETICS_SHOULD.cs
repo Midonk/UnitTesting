@@ -36,5 +36,16 @@ public class ARITHMETICS_SHOULD
         Assert.IsTrue(result == (Mathf.Sqrt(1.2f * 1.2f + 1.5f * 1.5f)));
     }
 
-    
+    [Test]
+    public void SOLVE03()
+    {
+        // Given
+        var myArithmetics = new Ex03(Mathf.Sqrt(1.2f * 1.2f + 1.5f * 1.5f));
+
+        // When
+        var result = myArithmetics.CalculateShape(Mathf.Sin(1.2f / Mathf.Sqrt(1.2f * 1.2f + 1.5f * 1.5f)));
+
+        // Then
+        Assert.IsTrue(result == (Mathf.Sin(1.2f / Mathf.Sqrt(1.2f * 1.2f + 1.5f * 1.5f))));
+    }
 }
