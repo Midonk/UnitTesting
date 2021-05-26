@@ -4,12 +4,12 @@ using UnityEngine;
 
 /// <summary>
 /// [Infos]
-/// texte de mise en scene
+///
 ///
 /// [level Design]
 /// mise en scene
 /// porte
-/// crane
+/// satellites
 ///
 /// [énigme]
 /// vous voyez un crane qui regarde à gauche et décidez de le tourner vers la droite

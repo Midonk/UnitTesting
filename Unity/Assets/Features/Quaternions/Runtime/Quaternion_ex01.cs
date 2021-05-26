@@ -4,15 +4,26 @@ using UnityEngine;
 
 /// <summary>
 /// [Infos]
-/// bonjour
+/// Vous êtes le technicien de maintenance de la chaîne de satellite
+/// d'Elon Musk celle-ci relie la terre à la planète Mars.
 ///
-/// [level Design]
-/// mise en scene
-/// porte
-/// crane
+/// A la suite de la récente tempête solaire, vous devez réaligner les différents
+/// mirroirs pour rétablir la liaison de particules photon.
 ///
-/// [énigme]
-/// il est écrit tournez de 30° le crane sur son axe vertical
+/// Le canon à photon se trouve en orbite terrestre sur ISS,
+/// vous leur demander via une simple liaison radio de corriger l'axe
+/// du canon pour viser le premier satellite relais
+///
+/// [outils]
+///     canon à photon
+///     satellite
+///     ISS
+///     relais à photon
+///
+/// [Task]
+/// Demandez aux ingénieur sur l'ISS de tourner le canon de 30° sur son axe vertical.
+/// En leur envoyant votre demande sous forme d'un Quaternion.
+///
 /// </summary>
 
 namespace TestSystem

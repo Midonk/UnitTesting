@@ -4,15 +4,17 @@ using UnityEngine;
 
 /// <summary>
 /// [Infos]
-/// texte de mise en scene
+/// Bien, vous venez de relier l'ISS au premier satellite et
+/// vous pouvez maintenant lui envoyer des commandes via le flux de particules photon
+/// vous devez maintenant tourner orienter ce relais.
 ///
-/// [level Design]
-/// mise en scene
-/// porte
-/// crane
+/// [outils]
+///     canon à photon
+///     satellites
+///     relais à photon
 ///
 /// [énigme]
-/// vous devez faire la rotation inverse de 30°
+/// Il vous faut envoyer une commande sous forme de Quaternion en prenant l'inverse de la premiere commande pour que le miroir du satellite puisse être orienter dans le bon sens.
 /// </summary>
 
 namespace TestSystem

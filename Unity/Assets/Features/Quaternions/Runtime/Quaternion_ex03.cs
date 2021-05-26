@@ -4,15 +4,16 @@ using UnityEngine;
 
 /// <summary>
 /// [Infos]
-/// texte de mise en scene
+/// Le satellite suivant est carrément retourné sur son axe vertical !
+/// il faut le faire rouler sur lui même.
 ///
-/// [level Design]
-/// mise en scene
-/// porte
-/// crane
+/// [outils]
+///     canon à photon
+///     satellites
+///     relais à photon
 ///
 /// [énigme]
-/// revenez à la rotation de 30 avec un écart maximum de 1°
+/// Le relais est dans la rotation -30° sur son axe vertical vous devez revenir à la rotation de 30° avec un écart maximum de 1° d'erreur !
 /// </summary>
 
 namespace TestSystem
