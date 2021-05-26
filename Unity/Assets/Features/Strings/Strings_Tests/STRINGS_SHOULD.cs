@@ -10,6 +10,7 @@ using String_e03 = String_exo03.String_exo03;
 using String_e04 = String_exo04.String_exo04;
 using String_e05 = String_exo05.String_exo05;
 using String_e06 = String_exo06.String_exo06;
+using String_e07 = String_exo07.String_exo07;
 public class STRINGS_SHOULD
 {
     [Test]
@@ -63,6 +64,8 @@ public class STRINGS_SHOULD
     [Test]
     public void Exo07()
     {
-        
+        var myTryOut = new String_e07();
+        var answer7 = myTryOut.TryOut();
+        Assert.IsTrue(answer7 == "TOUT À FAIT");
     }
 }
