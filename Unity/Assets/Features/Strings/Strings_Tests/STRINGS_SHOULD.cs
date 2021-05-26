@@ -11,6 +11,9 @@ using String_e04 = String_exo04.String_exo04;
 using String_e05 = String_exo05.String_exo05;
 using String_e06 = String_exo06.String_exo06;
 using String_e07 = String_exo07.String_exo07;
+using String_e08 = String_exo08.String_exo08;
+using String_e09 = String_exo09.String_exo09;
+using String_e10 = String_exo10.String_exo10;
 public class STRINGS_SHOULD
 {
     [Test]
@@ -67,5 +70,29 @@ public class STRINGS_SHOULD
         var myTryOut = new String_e07();
         var answer7 = myTryOut.TryOut();
         Assert.IsTrue(answer7 == "TOUT À FAIT");
+    }
+
+    [Test]
+    public void Exo08()
+    {
+        var myTryOut = new String_e08();
+        var answer8 = myTryOut.TryOut();
+        Assert.IsTrue(answer8 == "");
+    }
+
+    [Test]
+    public void Exo09()
+    {
+        var myTryOut = new String_e09();
+        var answer9 = myTryOut.TryOut();
+        Assert.IsTrue(answer9 == "");
+    }
+
+    [Test]
+    public void Exo10()
+    {
+        var myTryOut = new String_e10();
+        var answer10 = myTryOut.TryOut();
+        Assert.IsTrue(answer10 == "");
     }
 }
