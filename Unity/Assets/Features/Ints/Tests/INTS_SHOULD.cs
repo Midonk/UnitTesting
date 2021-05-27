@@ -75,18 +75,18 @@ public class INTS_SHOULD
         Assert.IsTrue(result == int.MaxValue);
     }
 
-    //[Test]
-    //public void TEST_EX06()
-    //{
-    //    //given
-    //    var testInt06 = new Ints.Int_Ex06();
-    //    var catYearOld = new string[] { "Blue", "Green", "Red", "Yellow", "Black" };
-    //    var dogYearOld = new string[] { "Blue", "Green", "Red", "Yellow", "Black" };
+    [Test]
+    public void TEST_EX06()
+    {
+        //given
+        var testInt06 = new Ints.Int_Ex06();
+        var catYearOld = new int[] { 4, 7, 9, 1, 3 };
+        var dogYearOld = new int[] { 5, 8, 7, 5, 10 };
 
-    //    //when
-    //    var result = testInt06.IntMaximum();
+        //when
+        var result = testInt06.PetsYearOld(catYearOld, dogYearOld);
 
-    //    //then
-    //    Assert.IsTrue(result == int.MaxValue);
-    //}
+        //then
+        Assert.IsTrue(result == 1);
+    }
 }
