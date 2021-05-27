@@ -1,10 +1,10 @@
 {
-    "name": "Tests",
+    "name": "Quaternion_Tests",
     "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "TestSystem"
+        "QuaternionTestSystem"
     ],
     "includePlatforms": [
         "Editor"
