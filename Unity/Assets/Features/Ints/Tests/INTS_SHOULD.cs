@@ -167,4 +167,17 @@ public class INTS_SHOULD
         //then
         Assert.IsTrue(result == 14);
     }
+
+    [Test]
+    public void TEST_EX10()
+    {
+        //given
+        var testInt10 = new Ints.Int_Ex10();
+
+        //when
+        var result = testInt10.NewLife(124, 365, 54);
+
+        //then
+        Assert.IsTrue(result == 2444040);
+    }
 }
