@@ -1,0 +1,29 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace Arithmetics
+{
+    public class Arithmetic_ex05
+    {
+        public float m_waveMaxVariationScale;
+
+        #region Constructor
+        public Arithmetic_ex05(float wavemaxvariationscale)
+        {
+            m_waveMaxVariationScale = wavemaxvariationscale;
+        }
+
+        #endregion
+
+
+        // Ce n'est point fini les amis, à présent, Cherif veut absolument implémenter un moyen de faire grossir
+        // ou diminuer la largeur des vagues selon un temps écoulé, avec la valeur de grandeur de début et de fin.
+        // Sachant que la grandeur minimale est de 1m et 50cm.
+
+        public float CalculateWavesWidth(float value)
+        {
+            return 0;
+        }
+    }
+}

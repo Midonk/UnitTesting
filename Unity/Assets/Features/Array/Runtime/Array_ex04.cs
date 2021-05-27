@@ -8,13 +8,13 @@ namespace Arrays
 	{
 		#region Main
 
-		/// Des positions ennemies sont détectées et à portée du canon
-		/// Déterminer quel est la coordonée ennemie la plus proche de nous
-		public Vector2 GetClosestEnemyPosition(Vector2 radarPosition, Vector2[] enemyCoordonates)
+		/// Inverser les index du tableau
+		/// (Oui j'avais pas d'idée)
+		public int[] RevertArray(int[] array)
 		{
-			return enemyCoordonates[0];
+			return new int[0];
 		}
-			
+		
 		#endregion
 	}
 }

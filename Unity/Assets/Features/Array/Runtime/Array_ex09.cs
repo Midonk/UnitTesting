@@ -8,15 +8,13 @@ namespace Arrays
 	{
 		#region Main
 
-		/// Notre usine est approvisionnée en minéraux bruts
-		/// Leurs composants doivent être séparés pour être recombiné en type de matériaux plus compactes
-		/// Pour ce faire, voici la règle pour les recombiner:
-		/// Le composant Xelgon s'ajoute au composant Yorus, tandis que le composant Zron multipliera le résultat
-		public float[] MineralsProcessingFactory(Vector3Int[] minerals)
+		/// Des positions ennemies sont détectées et à portée du canon
+		/// Déterminer quel est la coordonée ennemie la plus proche de nous
+		public Vector2 GetClosestEnemyPosition(Vector2 radarPosition, Vector2[] enemyCoordonates)
 		{
-			return new float[0];
+			return enemyCoordonates[0];
 		}
-
+			
 		#endregion
 	}
 }
