@@ -128,4 +128,43 @@ public class INTS_SHOULD
         //then
         Assert.IsTrue(result == "Bingo");
     }
+
+    [Test]
+    public void TEST_EX09_MIN()
+    {
+        //given
+        var testInt09 = new Ints.Int_Ex09();
+
+        //when
+        var result = testInt09.SliderGame(0, 3, 12);
+
+        //then
+        Assert.IsTrue(result == 3);
+    }
+
+    [Test]
+    public void TEST_EX09_MAX()
+    {
+        //given
+        var testInt09 = new Ints.Int_Ex09();
+
+        //when
+        var result = testInt09.SliderGame(1, 24, 42);
+
+        //then
+        Assert.IsTrue(result == 42);
+    }
+
+    [Test]
+    public void TEST_EX09_RANDOM()
+    {
+        //given
+        var testInt09 = new Ints.Int_Ex09();
+
+        //when
+        var result = testInt09.SliderGame(0.45f, 5, 25);
+
+        //then
+        Assert.IsTrue(result == 14);
+    }
 }
