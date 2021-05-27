@@ -39,7 +39,6 @@ public class FloatTest
     }
 
     [Test]
-
     public void TEST_FLOAT_EX03()
     {
         // Given
@@ -51,6 +50,18 @@ public class FloatTest
 
         // Then
         Assert.IsTrue(Mathf.Approximately(expected, result));
+    }
+    [Test]
+    public void TEST_FLOAT_EX04()
+    {
+        // Given
+        var myTestFloat04 = new Float_ex04(1f);
 
+        // When
+        var result = myTestFloat04.CalculateStage(17f);
+        var expected = 17f;
+
+        // Then
+        Assert.IsTrue(Mathf.Approximately(expected, result));
     }
 }
