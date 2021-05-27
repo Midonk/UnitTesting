@@ -13,7 +13,7 @@ using Ex06 = Arithmetics.Arithmetic_ex06;
 using Ex07 = Arithmetics.Arithmetic_ex07;
 using Ex08 = Arithmetics.Arithmetic_ex08;
 using Ex09 = Arithmetics.Arithmetic_ex09;
-//using Ex10 = Arithmetics.Arithmetic_ex10;
+using Ex10 = Arithmetics.Arithmetic_ex10;
 
 public class ARITHMETICS_SHOULD
 {
@@ -132,5 +132,24 @@ public class ARITHMETICS_SHOULD
 
         // Then
         Assert.IsTrue(result == Mathf.Pow(3.0f, 2.2f));
+    }
+
+    [Test]
+    public void SOLVE10()
+    {
+        // Given
+        var myArithmetics = new Ex10();
+
+        // When
+        var result = myArithmetics.Calculate(6);
+
+        // Then
+        var expected = 1;
+        for (int i = 1; i <= 6; i++)
+        {
+            expected *= i;
+        }
+
+        Assert.IsTrue(result == expected);
     }
 }
