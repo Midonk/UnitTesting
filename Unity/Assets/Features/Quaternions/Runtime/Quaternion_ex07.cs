@@ -4,8 +4,9 @@ using UnityEngine;
 
 /// <summary>
 /// [Infos]
-/// La caméra qui vous permet de voir l'etat du miroir à bougée
-/// Il vous faut avant de bouger le miroir vérifier l'état de celui-ci
+/// La planète mars est toute proche
+/// La caméra qui vous permet de voir celle-ci à bougée
+/// Il vous faut la réglée avant de pouvoir voir la planète rouge.
 ///
 /// [level Design]
 ///     Caméra
@@ -38,10 +39,10 @@ namespace QuaternionTestSystem
 
         public Quaternion ChangeLookRotation(Quaternion value)
         {
-            Debug.Log($"<color=orange>{Quaternion.LookRotation(Vector3.down, Vector3.left)}</color>");
-            return Quaternion.LookRotation(Vector3.down, Vector3.left);
+            // réponse attendue :
+            //return Quaternion.LookRotation(Vector3.down, Vector3.left);
 
-            //return value;
+            return value;
         }
 
         #endregion Main

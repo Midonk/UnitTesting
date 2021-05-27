@@ -40,8 +40,6 @@ namespace QuaternionTestSystem
 
         public float ProductBetween1and2(float value)
         {
-            //Debug.Log($"<color=orange>{Quaternion.Dot(Quaternion.Euler(0, 1, 0), Quaternion.Euler(0, 3, 0))}</color>");
-
             //return Quaternion.Dot(Quaternion.Euler(0, 30, 0), Quaternion.Inverse(Quaternion.Euler(0, 30, 0)));
 
             // attendu :

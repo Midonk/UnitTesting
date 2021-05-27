@@ -22,15 +22,15 @@ namespace QuaternionTestSystem
     {
         #region Exposed
 
-        public Quaternion m_lerp;
+        public Quaternion m_Slerp;
 
         #endregion Exposed
 
         #region Constructor
 
-        public Quaternion_ex06(Quaternion _lerp)
+        public Quaternion_ex06(Quaternion _Slerp)
         {
-            m_lerp = _lerp;
+            m_Slerp = _Slerp;
         }
 
         #endregion Constructor
