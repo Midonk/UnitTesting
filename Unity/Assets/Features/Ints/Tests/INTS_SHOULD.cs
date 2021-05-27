@@ -115,4 +115,17 @@ public class INTS_SHOULD
         //then
         Assert.IsTrue(Mathf.Approximately(result, (6 * 5.20f)));
     }
+
+    [Test]
+    public void TEST_EX08()
+    {
+        //given
+        var testInt08 = new Ints.Int_Ex08();
+
+        //when
+        var result = testInt08.CasinoOfBingo(53);
+
+        //then
+        Assert.IsTrue(result == "Bingo");
+    }
 }
