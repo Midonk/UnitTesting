@@ -5,7 +5,7 @@ using NUnit.Framework;
 
 using SystemToTest = QuaternionTestSystem.Quaternion_ex05;
 
-public class QE05 : MonoBehaviour
+public class QE05
 {
     [Test]
     public void PRODUCT_BETWEEN_2_INPUTS()

@@ -3,7 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
+/// [Infos]
+/// L'IA vous souhaite la bienvenue sur ce relais
+/// et souhaite que vous l'aidiez car son relais est tourné dans le
+/// mauvais sens pour pouvoir réactiver le flux de photon
 ///
+/// [level Design]
+///     IA du relais satellite
+///
+/// [énigme]
+/// la premiere rotation coïncide avec la date de début de formation
+/// et la rotation voulue est la date du début de création de l'exercice
+/// la vitesse est de 1
 /// </summary>
 namespace QuaternionTestSystem
 {
@@ -26,10 +37,10 @@ namespace QuaternionTestSystem
 
         #region Main
 
-        public Quaternion GetTheLerp(Quaternion value)
+        public Quaternion GetTheSlerp(Quaternion value)
         {
             // calcul de la réponse
-            value = Quaternion.Lerp(Quaternion.Euler(13, 3, 21), Quaternion.Euler(26, 5, 21), 1);
+            //value = Quaternion.Slerp(Quaternion.Euler(13, 3, 21), Quaternion.Euler(27, 5, 21), 1);
 
             //return value;
             return value;

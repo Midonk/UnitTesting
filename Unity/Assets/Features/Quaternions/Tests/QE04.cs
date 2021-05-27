@@ -5,7 +5,7 @@ using NUnit.Framework;
 
 using SystemToTest = QuaternionTestSystem.Quaternion_ex04;
 
-public class QE04 : MonoBehaviour
+public class QE04
 {
     [Test]
     public void TURN_THE_CRANE_FROM_LEFT_TO_RIGHT()

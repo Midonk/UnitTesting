@@ -5,7 +5,7 @@ using NUnit.Framework;
 
 using SystemToTest = QuaternionTestSystem.Quaternion_ex02;
 
-public class QE02 : MonoBehaviour
+public class QE02
 {
     [Test]
     public void APPLY_INVERSE_ROTATION_FROM_TESTSYSTEM_ON_AXIS_Y_OF_30()

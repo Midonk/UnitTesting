@@ -5,7 +5,7 @@ using NUnit.Framework;
 
 using SystemToTest = QuaternionTestSystem.Quaternion_ex03;
 
-public class QE03 : MonoBehaviour
+public class QE03
 {
     [Test]
     public void COME_BACK_FROM_NEGATIVE_30_TO_TESTSYSTEM_ON_AXIS_Y_OF_30()
