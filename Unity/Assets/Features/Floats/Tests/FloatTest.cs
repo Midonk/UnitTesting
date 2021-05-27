@@ -9,7 +9,7 @@ using Float;
 public class FloatTest
 {
     [Test]
-    public void TEST_FLOAT_EX01()
+    public void EX01_TEST_FLOAT()
     {
         // Given
         var myTestFloat = new Float_ex01(2019f);
@@ -23,7 +23,7 @@ public class FloatTest
     }
 
     [Test]
-    public void TEST_FLOAT_EX02()
+    public void EX02_TEST_FLOAT()
     {
         // Given
         var myTestFloat02 = new Float_ex02(0f);
@@ -39,7 +39,7 @@ public class FloatTest
     }
 
     [Test]
-    public void TEST_FLOAT_EX03()
+    public void EX03_TEST_FLOAT()
     {
         // Given
         var myTestFloat03 = new Float_ex03(30f);
@@ -52,7 +52,7 @@ public class FloatTest
         Assert.IsTrue(Mathf.Approximately(expected, result));
     }
     [Test]
-    public void TEST_FLOAT_EX04()
+    public void EX04_TEST_FLOAT()
     {
         // Given
         var myTestFloat04 = new Float_ex04(1f);
@@ -63,5 +63,30 @@ public class FloatTest
 
         // Then
         Assert.IsTrue(Mathf.Approximately(expected, result));
+    }
+
+    [Test]
+    public void EX05_TEST_FLOAT_EVEN()
+    {
+        // Given
+        var myTestFloat05 = new Float_ex05();
+
+        // When
+        var result = myTestFloat05.FindTheNormal(2f);
+
+        // Then
+        Assert.IsTrue(result);
+    }
+    [Test]
+    public void EX05_TEST_FLOAT_ODD()
+    {
+        // Given
+        var myTestFloat05 = new Float_ex05();
+
+        // When
+        var result = myTestFloat05.FindTheNormal(1f);
+
+        // Then
+        Assert.IsFalse(result);
     }
 }
