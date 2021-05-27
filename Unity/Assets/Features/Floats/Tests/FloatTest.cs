@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
-using TestFloat01 = Float.Float_ex01;
-using TestFloat02 = Float.Float_ex02;
+using Float;
+
 
 public class FloatTest
 {
@@ -12,7 +12,7 @@ public class FloatTest
     public void TEST_FLOAT_EX01()
     {
         // Given
-        var myTestFloat = new TestFloat01(2019f);
+        var myTestFloat = new Float_ex01(2019f);
 
         // When
         var years = myTestFloat.CalculateYears(15f);
@@ -26,12 +26,16 @@ public class FloatTest
     public void TEST_FLOAT_EX02()
     {
         // Given
+        var myTestFloat02 = new Float_ex02(0f);
 
 
         // When
+        var result = myTestFloat02.CalculateDistance(25f);
+        var expected = 25f;
 
 
         // Then
+        Assert.IsTrue(Mathf.Approximately(expected, result));
 
     }
 }
