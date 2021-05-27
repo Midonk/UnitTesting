@@ -12,6 +12,8 @@ using Ex05 = Arithmetics.Arithmetic_ex05;
 using Ex06 = Arithmetics.Arithmetic_ex06;
 using Ex07 = Arithmetics.Arithmetic_ex07;
 using Ex08 = Arithmetics.Arithmetic_ex08;
+using Ex09 = Arithmetics.Arithmetic_ex09;
+//using Ex10 = Arithmetics.Arithmetic_ex10;
 
 public class ARITHMETICS_SHOULD
 {
@@ -117,5 +119,18 @@ public class ARITHMETICS_SHOULD
 
         // Then
         Assert.IsTrue(Mathf.Approximately(result, (Mathf.Abs(Mathf.Round(-4.8f) * 2) / 3.0f)));
+    }
+
+    [Test]
+    public void SOLVE09()
+    {
+        // Given
+        var myArithmetics = new Ex09();
+
+        // When
+        var result = myArithmetics.CalculateTimeToRoom(2.2f, 3.0f);
+
+        // Then
+        Assert.IsTrue(result == Mathf.Pow(3.0f, 2.2f));
     }
 }
