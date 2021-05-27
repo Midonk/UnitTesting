@@ -49,6 +49,19 @@ public class INTS_SHOULD
     }
 
     [Test]
+    public void TEST_EX03_VARIANT()
+    {
+        //given
+        var testInt03 = new Ints.Int_Ex03();
+
+        //when
+        var result = testInt03.ChangeMoney(4.12f);
+
+        //then
+        Assert.IsTrue(4 == result);
+    }
+
+    [Test]
     public void TEST_EX04()
     {
         //given
@@ -88,5 +101,18 @@ public class INTS_SHOULD
 
         //then
         Assert.IsTrue(result == 1);
+    }
+
+    [Test]
+    public void TEST_EX07()
+    {
+        //given
+        var testInt07 = new Ints.Int_Ex07();
+
+        //when
+        var result = testInt07.PaulTheHandyman(5.50f, 5.20f);
+
+        //then
+        Assert.IsTrue(Mathf.Approximately(result, (6 * 5.20f)));
     }
 }
