@@ -10,6 +10,8 @@ using Ex03 = Arithmetics.Arithmetic_ex03;
 using Ex04 = Arithmetics.Arithmetic_ex04;
 using Ex05 = Arithmetics.Arithmetic_ex05;
 using Ex06 = Arithmetics.Arithmetic_ex06;
+using Ex07 = Arithmetics.Arithmetic_ex07;
+using Ex08 = Arithmetics.Arithmetic_ex08;
 
 public class ARITHMETICS_SHOULD
 {
@@ -85,9 +87,35 @@ public class ARITHMETICS_SHOULD
         var myArithmetics = new Ex06(4.8f);
 
         // When
-        var result = myArithmetics.CalculateBeachLength(Mathf.Round(4.8f));
+        var result = myArithmetics.CalculateBeachLength(4.8f);
 
         // Then
         Assert.IsTrue(result == Mathf.Round(4.8f));
+    }
+
+    [Test]
+    public void SOLVE07()
+    {
+        // Given
+        var myArithmetics = new Ex07();
+
+        // When
+        var result = myArithmetics.CalculateTime(Mathf.Round(4.8f), 3.0f);
+
+        // Then
+        Assert.IsTrue(Mathf.Approximately(result, Mathf.Round(4.8f) / 3.0f));
+    }
+
+    [Test]
+    public void SOLVE08()
+    {
+        // Given
+        var myArithmetics = new Ex08();
+
+        // When
+        var result = myArithmetics.CalculatePositiveTime(Mathf.Round(-4.8f), 3.0f);
+
+        // Then
+        Assert.IsTrue(Mathf.Approximately(result, (Mathf.Abs(Mathf.Round(-4.8f) * 2) / 3.0f)));
     }
 }
