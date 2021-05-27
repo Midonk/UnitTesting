@@ -5,35 +5,19 @@ using UnityEngine;
 namespace Arrays
 {
     public class Array_ex03
-    {
-        #region Publics
+	{
+		#region Main
 
-        public string[] m_carrierInventory;
+		/// Notre canon orbital est réquisitionné malgré qu'il ne soit pas terminé
+		/// Certains réacteurs internes ne sont pas opérationnels
+		/// Il est capable de tirer mais le chargement du tir doit être chargé par plusieurs réacteurs à la suite
+		/// Un réacteur non-activé annulera le chargement du tir
+		/// Déterminer si le canon pourra tirer ou non
+		public bool OrbitalCanonCanShoot(bool[] activeReactors, int minimumLoad)
+		{
+			return false;
+		}
 
-        #endregion
-
-
-        #region Constructor
-
-        public Array_ex03(string[] inventory)
-        {
-            m_carrierInventory = inventory;
-        }
-
-        #endregion
-
-
-        #region Main
-
-        /// Notre extracteur de ressources est opérationnel et nous pouvons maintenant ravitailler notre base
-        /// Problème, nous avons extraits toutes sortes de ressources différentes
-        /// Trier la ressource ciblée et stockez-la dans l'inventaire du transporteur
-        /// Attention notre transporteur à un inventaire limité
-        public string[] RessourcesForCarrier(string[] ressources, string targetRessource)
-        {
-            return m_carrierInventory;
-        }
-
-        #endregion
-    }
+		#endregion
+	}
 }

@@ -4,20 +4,36 @@ using UnityEngine;
 
 namespace Arrays
 {
-	public class Array_ex07
-	{
-		#region Main
+    public class Array_ex07
+    {
+        #region Publics
 
-		/// Nous avons trouvé des gisements potentiellement exploitables
-		/// Il faut déterminer récupèrer la valeur pour chaque gisement
-		/// Attention, nos capteurs ont également détecté un monstre souterrain sensible au son
-		/// Si vous détectez qu'un gisement est aussi profond que le monstre, voire plus profond encore...
-		/// ...indiquez une valeur de 0, ce gisement ne sera pas exploitable
-		public int[] GetDepositsValues(int[,] depositsValueAndDepth, int depthOfMonster)
-		{
-			return new int[0];
-		}
+        public string[] m_carrierInventory;
 
-		#endregion
-	}
+        #endregion
+
+
+        #region Constructor
+
+        public Array_ex07(string[] inventory)
+        {
+            m_carrierInventory = inventory;
+        }
+
+        #endregion
+
+
+        #region Main
+
+        /// Notre extracteur de ressources est opérationnel et nous pouvons maintenant ravitailler notre base
+        /// Problème, nous avons extraits toutes sortes de ressources différentes
+        /// Trier la ressource ciblée et stockez-la dans l'inventaire du transporteur
+        /// Attention notre transporteur à un inventaire limité
+        public string[] RessourcesForCarrier(string[] ressources, string targetRessource)
+        {
+            return m_carrierInventory;
+        }
+
+        #endregion
+    }
 }

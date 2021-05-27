@@ -66,176 +66,172 @@ public class ARRAYS_SHOULD
     }
 
     [Test]
-    public void EX03_HAVE_METAL_AT_INDEX_3_IN_ARRAY()
-    {
-        // Given
-        var production = new string[] { "metal", "junk", "metal", "rock", "rock", "metal", "metal", "metal" };
-        string[] carrierInventory;
-        var ArrayEx03 = new Array_ex03(new string[4]);
-
-        // When
-        carrierInventory = ArrayEx03.RessourcesForCarrier(production, "metal");
-
-        // Then
-        Assert.IsTrue(carrierInventory[3] == "metal");
-    }
-
-    [Test]
-    public void EX03_HAVE_ROCK_AT_INDEX_1_IN_ARRAY()
-    {
-        // Given
-        var production = new string[] { "metal", "junk", "metal", "rock", "rock", "metal", "metal", "rock" };
-        string[] carrierInventory;
-        var ArrayEx03 = new Array_ex03(new string[3]);
-
-        // When
-        carrierInventory = ArrayEx03.RessourcesForCarrier(production, "rock");
-
-        // Then
-        Assert.IsTrue(carrierInventory[1] == "rock");
-    }
-
-    [Test]
-    public void EX03_HAVE_NULL_AT_LAST_INDEX()
-    {
-        // Given
-        var production = new string[] { "metal", "junk", "metal", "rock", "rock", "metal", "metal", "rock" };
-        string[] carrierInventory;
-        var ArrayEx03 = new Array_ex03(new string[4]);
-
-        // When
-        carrierInventory = ArrayEx03.RessourcesForCarrier(production, "junk");
-
-        // Then
-        Assert.IsNull(carrierInventory[3]);
-    }
-
-    [Test]
-    public void EX04_RETURN_COORDINATE_2_NEGATIVE_1()
-    {
-        // Given
-        var enemyCoordonates = new Vector2[] { new Vector2(2, -1),
-                                               new Vector2(3, 1),
-                                               new Vector2(-1, 5),
-                                               new Vector2(0, 6) };
-
-        var radarPosition = new Vector2(0, 0);
-        var ArrayEx04 = new Array_ex04();
-
-        // When
-        var result = ArrayEx04.GetClosestEnemyPosition(radarPosition, enemyCoordonates);
-
-        // Then
-        Assert.IsTrue(result == new Vector2(2, -1));
-    }
-
-    [Test]
-    public void EX04_RETURN_COORDINATE_10_5()
-    {
-        // Given
-        var enemyCoordonates = new Vector2[] { new Vector2(0, -1),
-                                               new Vector2(1, 8),
-                                               new Vector2(10, 5),
-                                               new Vector2(2, -2) };
-
-        var radarPosition = new Vector2(9, 5);
-        var ArrayEx04 = new Array_ex04();
-
-        // When
-        var result = ArrayEx04.GetClosestEnemyPosition(radarPosition, enemyCoordonates);
-
-        // Then
-        Assert.IsTrue(result == new Vector2(10, 5));
-    }
-
-    [Test]
-    public void EX05_RETURN_TRUE()
+    public void EX03_RETURN_TRUE()
     {
         // Given
         var activeReactors = new bool[] { true, false, true, true, true, true, false };
 
         int minimumLoad = 4;
-        var ArrayEx05 = new Array_ex05();
+        var ArrayEx03 = new Array_ex03();
 
         // When
-        var result = ArrayEx05.OrbitalCanonCanShoot(activeReactors, minimumLoad);
+        var result = ArrayEx03.OrbitalCanonCanShoot(activeReactors, minimumLoad);
 
         // Then
         Assert.IsTrue(result);
     }
 
     [Test]
-    public void EX05_RETURN_FALSE()
+    public void EX03_RETURN_FALSE()
     {
         // Given
         var activeReactors = new bool[] { true, true, false, true, true};
 
         int minimumLoad = 3;
-        var ArrayEx05 = new Array_ex05();
+        var ArrayEx03 = new Array_ex03();
 
         // When
-        var result = ArrayEx05.OrbitalCanonCanShoot(activeReactors, minimumLoad);
+        var result = ArrayEx03.OrbitalCanonCanShoot(activeReactors, minimumLoad);
 
         // Then
         Assert.IsFalse(result);
     }
 
     [Test]
-    public void EX06_RETURN_4_FROM_REVERSE_ARRAY()
+    public void EX04_RETURN_4_FROM_REVERSE_ARRAY()
     {   
         // Given
         var array = new int[] { 1, 2, 3, 4, 5 };
-        var ArrayEx06 = new Array_ex06();
+        var ArrayEx04 = new Array_ex04();
 
         // When
-        var result = ArrayEx06.RevertArray(array);
+        var result = ArrayEx04.RevertArray(array);
 
         // Then
         Assert.IsTrue(result[1] == 4);
     }
 
     [Test]
-    public void EX06_RETURN_NEGATIVE_3_FROM_REVERSE_ARRAY()
+    public void EX04_RETURN_NEGATIVE_3_FROM_REVERSE_ARRAY()
     {
         // Given
         var array = new int[] { 0, 1, 0, -3 };
-        var ArrayEx06 = new Array_ex06();   
+        var ArrayEx04 = new Array_ex04();   
             
         // When
-        var result = ArrayEx06.RevertArray(array);
+        var result = ArrayEx04.RevertArray(array);
 
         // Then
         Assert.IsTrue(result[0] == -3);
     }
 
     [Test]
-    public void EX07_RETURN_5_FROM_ARRAY()
+    public void EX05_RETURN_15_FROM_ARRAY()
+    {
+        // Given
+        var ArrayEx05 = new Array_ex05();
+        var minerals = new Vector3Int[] { new Vector3Int(0, 2, 4),
+                                       new Vector3Int(1, 5, 2),
+                                       new Vector3Int(10, 5, 1),
+                                       new Vector3Int(2, 2, 1) };
+
+        // When
+        var result = ArrayEx05.MineralsProcessingFactory(minerals);
+
+        // Then
+        Assert.IsTrue(result[2] == 15);
+    }
+
+    [Test]
+    public void EX05_RETURN_0_FROM_ARRAY()
+    {
+        // Given
+        var ArrayEx05 = new Array_ex05();
+        var minerals = new Vector3Int[] { new Vector3Int(0, 1, 1),
+                                       new Vector3Int(1, 1, 0),
+                                       new Vector3Int(5, 2, 1),
+                                       new Vector3Int(2, 1, 3) };
+
+        // When
+        var result = ArrayEx05.MineralsProcessingFactory(minerals);
+
+        // Then
+        Assert.IsTrue(result[1] == 0);
+    }
+
+    [Test]
+    public void EX06_RETURN_5_FROM_ARRAY()
     {
         // Given
         var depositsValueAndDepth = new int[,] { { 2 , 15 }, { 15, 8 }, { 5, 11 }, { 5, 8 }, { 5, 5 } };
         var depthOfMonster = 10;
-        var ArrayEx07 = new Array_ex07();
+        var ArrayEx06 = new Array_ex06();
 
         // When
-        var result = ArrayEx07.GetDepositsValues(depositsValueAndDepth, depthOfMonster);
+        var result = ArrayEx06.GetDepositsValues(depositsValueAndDepth, depthOfMonster);
 
         // Then
         Assert.IsTrue(result[3] == 5);
     }
 
     [Test]
-    public void EX07_RETURN_0_FROM_ARRAY()
+    public void EX06_RETURN_0_FROM_ARRAY()
     {
         // Given
         var depositsValueAndDepth = new int[,] { { 0, 2 }, { 15, 4 }, { 5, 8 }, { 5, 2 }, { 5, 1 } };
         var depthOfMonster = 5;
-        var ArrayEx07 = new Array_ex07();
+        var ArrayEx06 = new Array_ex06();
 
         // When
-        var result = ArrayEx07.GetDepositsValues(depositsValueAndDepth, depthOfMonster);
+        var result = ArrayEx06.GetDepositsValues(depositsValueAndDepth, depthOfMonster);
 
         // Then
         Assert.IsTrue(result[2] == 0);
+    }
+
+    [Test]
+    public void EX07_HAVE_METAL_AT_INDEX_3_IN_ARRAY()
+    {
+        // Given
+        var production = new string[] { "metal", "junk", "metal", "rock", "rock", "metal", "metal", "metal" };
+        string[] carrierInventory;
+        var ArrayEx07 = new Array_ex07(new string[4]);
+
+        // When
+        carrierInventory = ArrayEx07.RessourcesForCarrier(production, "metal");
+
+        // Then
+        Assert.IsTrue(carrierInventory[3] == "metal");
+    }
+
+    [Test]
+    public void EX07_HAVE_ROCK_AT_INDEX_1_IN_ARRAY()
+    {
+        // Given
+        var production = new string[] { "metal", "junk", "metal", "rock", "rock", "metal", "metal", "rock" };
+        string[] carrierInventory;
+        var ArrayEx07 = new Array_ex07(new string[3]);
+
+        // When
+        carrierInventory = ArrayEx07.RessourcesForCarrier(production, "rock");
+
+        // Then
+        Assert.IsTrue(carrierInventory[1] == "rock");
+    }
+
+    [Test]
+    public void EX07_HAVE_NULL_AT_LAST_INDEX()
+    {
+        // Given
+        var production = new string[] { "metal", "junk", "metal", "rock", "rock", "metal", "metal", "rock" };
+        string[] carrierInventory;
+        var ArrayEx07 = new Array_ex07(new string[4]);
+
+        // When
+        carrierInventory = ArrayEx07.RessourcesForCarrier(production, "junk");
+
+        // Then
+        Assert.IsNull(carrierInventory[3]);
     }
 
     [Test]
@@ -267,9 +263,9 @@ public class ARRAYS_SHOULD
         var HEAVY = SoldierType.HEAVYGUNNER;
         var ROCKET = SoldierType.ROCKETLAUNCHER;
 
-        var squads = new SoldierType[,] { { GUN, GUN, GUN, HEAVY}, // 554
-                                          { GUN, ROCKET, ROCKET, GUN }, // 2306
-                                          { HEAVY, HEAVY, GUN, GUN} }; // 704
+        var squads = new SoldierType[,] { { GUN, GUN, GUN, HEAVY},
+                                          { GUN, ROCKET, ROCKET, GUN },
+                                          { HEAVY, HEAVY, GUN, GUN} };
 
         // When
         var result = ArrayEx08.GetSquadsPower(squads);
@@ -279,37 +275,41 @@ public class ARRAYS_SHOULD
     }
 
     [Test]
-    public void EX09_RETURN_15_FROM_ARRAY()
+    public void EX09_RETURN_COORDINATE_2_NEGATIVE_1()
     {
         // Given
+        var enemyCoordonates = new Vector2[] { new Vector2(2, -1),
+                                               new Vector2(3, 1),
+                                               new Vector2(-1, 5),
+                                               new Vector2(0, 6) };
+
+        var radarPosition = new Vector2(0, 0);
         var ArrayEx09 = new Array_ex09();
-        var minerals = new Vector3Int[] { new Vector3Int(0, 2, 4), // 8
-                                       new Vector3Int(1, 5, 2), // 12
-                                       new Vector3Int(10, 5, 1), // 15
-                                       new Vector3Int(2, 2, 1) }; // 4
 
         // When
-        var result = ArrayEx09.MineralsProcessingFactory(minerals);
+        var result = ArrayEx09.GetClosestEnemyPosition(radarPosition, enemyCoordonates);
 
         // Then
-        Assert.IsTrue(result[2] == 15);
+        Assert.IsTrue(result == new Vector2(2, -1));
     }
 
     [Test]
-    public void EX09_RETURN_0_FROM_ARRAY()
+    public void EX09_RETURN_COORDINATE_10_5()
     {
         // Given
+        var enemyCoordonates = new Vector2[] { new Vector2(0, -1),
+                                               new Vector2(1, 8),
+                                               new Vector2(10, 5),
+                                               new Vector2(2, -2) };
+
+        var radarPosition = new Vector2(9, 5);
         var ArrayEx09 = new Array_ex09();
-        var minerals = new Vector3Int[] { new Vector3Int(0, 1, 1), // 1
-                                       new Vector3Int(1, 1, 0), // 0
-                                       new Vector3Int(5, 2, 1), // 7
-                                       new Vector3Int(2, 1, 3) }; // 9
 
         // When
-        var result = ArrayEx09.MineralsProcessingFactory(minerals);
+        var result = ArrayEx09.GetClosestEnemyPosition(radarPosition, enemyCoordonates);
 
         // Then
-        Assert.IsTrue(result[1] == 0);
+        Assert.IsTrue(result == new Vector2(10, 5));
     }
 
     [Test]
@@ -374,10 +374,3 @@ public class ARRAYS_SHOULD
         Assert.IsTrue(carrierInventory.GetLength(0) == 4);
     }
 }
-
-//public enum SoldierType
-//{
-//    GUNNER = 5,
-//    HEAVYGUNNER = 10,
-//    ROCKETLAUNCHER = 16
-//}
