@@ -39,10 +39,6 @@ namespace QuaternionTestSystem
 
         public Quaternion GetTheSlerp(Quaternion value)
         {
-            // calcul de la réponse
-            //value = Quaternion.Slerp(Quaternion.Euler(13, 3, 21), Quaternion.Euler(27, 5, 21), 1);
-
-            //return value;
             return value;
         }
 

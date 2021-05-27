@@ -8,11 +8,12 @@ using UnityEngine;
 /// il vous faut géolocaliser sur la station d'Elon Musk
 /// grâce à la triangulation via 3 satellites !
 ///
+/// le premier est placé au dessus de la ville de Roswell
+///
 ///
 ///
 /// [Task]
-/// Il faut demander à l'IA d'entrer la date du crash de Roswell
-/// pour connaître la rotation du premier satellite
+/// Il faut donner à l'IA un Quaternion pour pouvoir bouger ce satellite
 ///
 /// </summary>
 
@@ -37,10 +38,9 @@ namespace QuaternionTestSystem
 
         #region Main
 
-        public Quaternion TheTruthIsSomeWhereElse(Quaternion value)
+        public Quaternion TheCrashWasReal(Quaternion value)
         {
-            return Quaternion.Euler(07, 08, 47);
-            //return value;
+            return value;
         }
 
         #endregion Main

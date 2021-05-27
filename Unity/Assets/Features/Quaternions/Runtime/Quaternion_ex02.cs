@@ -40,8 +40,6 @@ namespace QuaternionTestSystem
 
         public Quaternion ApplyInverseRotationOf30(Quaternion value)
         {
-            //réponse attendue :
-            // return Quaternion.Inverse(Quaternion.Euler(0, 30, 0));
             return value;
         }
 

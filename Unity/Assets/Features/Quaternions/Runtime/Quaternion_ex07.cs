@@ -39,9 +39,6 @@ namespace QuaternionTestSystem
 
         public Quaternion ChangeLookRotation(Quaternion value)
         {
-            // réponse attendue :
-            //return Quaternion.LookRotation(Vector3.down, Vector3.left);
-
             return value;
         }
 

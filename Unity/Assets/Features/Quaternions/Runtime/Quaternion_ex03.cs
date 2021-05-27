@@ -39,11 +39,6 @@ namespace QuaternionTestSystem
 
         public Quaternion ComeBackFromNegative30ToRotation30(Quaternion value)
         {
-            //réponse attendue :
-            // return Quaternion.RotateTowards(Quaternion.Euler(0, -30, 0),
-            //                                Quaternion.Euler(0, 30, 0),
-            //                                1);
-
             return value;
         }
 

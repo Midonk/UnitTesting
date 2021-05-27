@@ -4,20 +4,19 @@ using UnityEngine;
 
 /// <summary>
 /// [Infos]
-/// vous devez tourner horizontalement ce relais pour qu'il puisse envoyer la lumière vous souhaitez
+/// Le prochain satellite est américain !
+/// Lorsque vous parlez discutez du satellite avec l'IA
+/// Elle vous parle de liberté et indépendance !
 ///
-/// [Level Design]
-///     source de photon
-///     satellites
-///     relais à photon
+/// [enigme]
+/// Lorsque vous discutez du satellite avec l'IA
+/// Elle vous parle de liberté et indépendance !
 ///
-/// [énigme]
-/// le relais est orienté complètement à gauche et vous décider de l'orienter complètement à droite
 /// </summary>
 
 namespace QuaternionTestSystem
 {
-    public class Quaternion_ex04
+    public class Quaternion_ex09
     {
         #region Exposed
 
@@ -27,7 +26,7 @@ namespace QuaternionTestSystem
 
         #region Constructor
 
-        public Quaternion_ex04(Quaternion _rotation)
+        public Quaternion_ex09(Quaternion _rotation)
         {
             m_rotation = _rotation;
         }
@@ -36,7 +35,7 @@ namespace QuaternionTestSystem
 
         #region Main
 
-        public Quaternion TurnTheCrane(Quaternion value)
+        public Quaternion IndependanceDay(Quaternion value)
         {
             return value;
         }

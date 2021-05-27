@@ -49,8 +49,6 @@ namespace QuaternionTestSystem
 
         public Quaternion ApplyRotationOnY(Quaternion value)
         {
-            //réponse attendue :
-            //return Quaternion.Euler(0, 30, 0);
             return value;
         }
 

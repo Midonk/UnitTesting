@@ -4,20 +4,18 @@ using UnityEngine;
 
 /// <summary>
 /// [Infos]
-/// vous devez tourner horizontalement ce relais pour qu'il puisse envoyer la lumière vous souhaitez
+/// Par chance le dernier Satellite en orbite marsienne était en place
+/// Félicitation !
+/// Votre dernière tache de la journée est de faire décoller et avancer
+/// Ingenuity
 ///
-/// [Level Design]
-///     source de photon
-///     satellites
-///     relais à photon
+/// [Task]
+/// Demandez à l'ia d'ordonner à Ingeuity de décoller et partir vers l'avant !
 ///
-/// [énigme]
-/// le relais est orienté complètement à gauche et vous décider de l'orienter complètement à droite
 /// </summary>
-
 namespace QuaternionTestSystem
 {
-    public class Quaternion_ex04
+    public class Quaternion_ex10
     {
         #region Exposed
 
@@ -27,7 +25,7 @@ namespace QuaternionTestSystem
 
         #region Constructor
 
-        public Quaternion_ex04(Quaternion _rotation)
+        public Quaternion_ex10(Quaternion _rotation)
         {
             m_rotation = _rotation;
         }
@@ -36,7 +34,7 @@ namespace QuaternionTestSystem
 
         #region Main
 
-        public Quaternion TurnTheCrane(Quaternion value)
+        public Quaternion LetsFly(Quaternion value)
         {
             return value;
         }

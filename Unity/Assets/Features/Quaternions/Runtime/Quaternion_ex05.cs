@@ -14,7 +14,7 @@ using UnityEngine;
 /// [énigme]
 /// Pour obtenir votre code de sécurité
 /// faites le produit de la rotation de l'énigme 1 avec l'énigme 2
-/// et donnez le reste en tant que code de sécurité
+/// et donnez ce qui est à droite de la virgule en tant que code de sécurité
 /// </summary>
 
 namespace QuaternionTestSystem
@@ -40,10 +40,6 @@ namespace QuaternionTestSystem
 
         public float ProductBetween1and2(float value)
         {
-            //return Quaternion.Dot(Quaternion.Euler(0, 30, 0), Quaternion.Inverse(Quaternion.Euler(0, 30, 0)));
-
-            // attendu :
-            //return 9998477;
             return value;
         }
 
